@@ -8,7 +8,7 @@ UartDriver::UartDriver()
   UART.Tx.buffer[1] = 'c';
   UART.Tx.buffer[2] = 'h';
   UART.Tx.buffer[3] = 'o';
-  UART.Tx.buffer[4] = '!';
+  UART.Tx.buffer[4] = 0x00;
 }
 
 void UartDriver::Init(void)
@@ -77,6 +77,7 @@ void UartDriver::Transmit(void)
 void UartDriver::Receive()
 {
   GPIOA->BSRR |= RE_DE << 16;
+  DMA1_Channel3->CCR &= ~DMA_CCR_EN;
   DMA1_Channel3->CNDTR = sizeof(UartDriver::Rx.buffer);
   DMA1_Channel3->CCR |=  DMA_CCR_EN;
 }

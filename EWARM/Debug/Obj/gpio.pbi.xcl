@@ -1,5 +1,5 @@
-"C:\Users\Евгений\Pyro\Src\gpio.c"
--std=c11
+"C:\Users\Евгений\Pyro\Src\gpio.cpp"
+-std=c++14
 -ferror-limit=0
 -fbracket-depth=512
 -I
@@ -18,6 +18,8 @@ E:\Program Files\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\DSP\Include
 E:\Program Files\IAR Systems\Embedded Workbench 8.2\arm\inc
 -I
 E:\Program Files\IAR Systems\Embedded Workbench 8.2\arm\inc\c
+-I
+E:\Program Files\IAR Systems\Embedded Workbench 8.2\arm\inc\cpp
 -I
 C:\Users\Евгений\Pyro\Inc
 -I
@@ -252,13 +254,55 @@ E:\Program Files\IAR Systems\Embedded Workbench 8.2\arm\CMSIS\DSP\Include
 -D__STDC_NO_THREADS__=1
 -D__STDC_ISO_10646__=201103L
 -D__STDC_HOSTED__=1
+-D__cplusplus=201402L
+-D__WCHAR_T=1
+-D__CHAR16_T_AND_CHAR32_T=1
+-D__BOOL=1
+-D__ARRAY_OPERATORS=1
 -D__EDG_IA64_ABI=1
 -D__EDG_IA64_ABI_VARIANT_CTORS_AND_DTORS_RETURN_THIS=1
 -D__EDG_IA64_ABI_USE_INT_STATIC_INIT_GUARD=1
+-D__cpp_aligned_new=201606
+-D__cpp_capture_star_this=201603
+-D__cpp_fold_expressions=201411
 -D__cpp_hex_float=201603
+-D__cpp_if_constexpr=201606
+-D__cpp_initializer_lists=200806
+-D__cpp_inline_variables=201606
+-D__cpp_namespace_attributes=201411
+-D__cpp_nested_namespace_definitions=201411
+-D__cpp_sized_deallocation=201309
+-D__cpp_structured_bindings=201606
+-D__cpp_unicode_characters=200704
+-D__cpp_aggregate_nsdmi=201304
+-D__cpp_alias_templates=200704
+-D__cpp_attributes=200809
+-D__cpp_binary_literals=201304
+-D__cpp_decltype=200707
+-D__cpp_decltype_auto=201304
+-D__cpp_delegating_constructors=200604
+-D__cpp_generic_lambdas=201304
+-D__cpp_inheriting_constructors=200802
+-D__cpp_init_captures=201304
+-D__cpp_lambdas=200907
+-D__cpp_nsdmi=200809
+-D__cpp_raw_strings=200710
+-D__cpp_ref_qualifiers=200710
+-D__cpp_return_type_deduction=201304
+-D__cpp_rvalue_references=200610
 -D__cpp_unicode_literals=200710
--D__cpp_static_assert=200410
+-D__cpp_user_defined_literals=200809
+-D__cpp_variable_templates=201304
+-D__cpp_variadic_templates=200704
+-D__cpp_enumerator_attributes=201411
+-D__cpp_constexpr=201606
+-D__cpp_range_based_for=201603
+-D__cpp_static_assert=201411
 -D__EDG_TYPE_TRAITS_ENABLED=1
+-D__VARIADIC_TEMPLATES=1
+-D__STDCPP_THREADS__=1
+-D__STDCPP_DEFAULT_NEW_ALIGNMENT__=8
+-D__EDG_CONSTEXPR_ENABLED__=1
 -D__EDG__=1
 -D__EDG_VERSION__=414
 -D__EDG_SIZE_TYPE__=unsigned int

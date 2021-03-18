@@ -1,12 +1,12 @@
 #include "main.h"
 
 void SystemClockSetting(void);
-void LED_Init(void);
 
 int main(void)
 {
   SystemClockSetting();
   SystemCoreClockUpdate();
+  
   LED_Init();
   
   UART.Init();
@@ -53,13 +53,4 @@ void SystemClockSetting(void)
   /* MSI reset */
   RCC->CR &= ~RCC_CR_MSION;
   while(RCC->CR & RCC_CR_MSIRDY) {}
-}
-
-void LED_Init(void)
-{
-   /* I/O port B - enable */
-  RCC->IOPENR |= RCC_IOPENR_IOPBEN;
-  
-   /* GPIO port B - output mode */
-  GPIOB->MODER = GPIO_MODER_MODE1_0 | GPIO_MODER_MODE2_0 | GPIO_MODER_MODE4_0;
 }

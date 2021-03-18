@@ -2,10 +2,8 @@
 #define __MAIN_H
 
 #include "tim.h"
-#include "gpio.h"
 
+#include "gpio.hpp"
 #include "usart.hpp"
-
-extern uint8_t request;
 
 #endif  /* __MAIN_H */
