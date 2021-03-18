@@ -1,0 +1,15 @@
+"E:\Program Files\IAR Systems\Embedded Workbench 8.2\arm\bin\armproc.dll" 
+
+"E:\Program Files\IAR Systems\Embedded Workbench 8.2\arm\bin\armstlink2.dll" 
+
+"C:\Users\Евгений\Pyro\EWARM\Debug\Exe\project.out" 
+
+--plugin="E:\Program Files\IAR Systems\Embedded Workbench 8.2\arm\bin\armbat.dll" 
+
+--device_macro="E:\Program Files\IAR Systems\Embedded Workbench 8.2\arm\config\debugger\ST\STM32L0xx.dmac" 
+
+--flash_loader="E:\Program Files\IAR Systems\Embedded Workbench 8.2\arm\config\flashloader\ST\FlashSTM32L07xxB.board" 
+
+
+
+
