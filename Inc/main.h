@@ -6,4 +6,6 @@
 #include "gpio.hpp"
 #include "usart.hpp"
 
+void Error_Handler(void);
+
 #endif  /* __MAIN_H */

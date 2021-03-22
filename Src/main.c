@@ -54,3 +54,6 @@ void SystemClockSetting(void)
   RCC->CR &= ~RCC_CR_MSION;
   while(RCC->CR & RCC_CR_MSIRDY) {}
 }
+
+void Error_Handler(void) {}
+

@@ -85804,6 +85804,35 @@
     "scope": null
   },
   {
+    "ID": "c:interface.hpp@33@macro@__INTERFACE_HPP",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__INTERFACE_HPP",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\interface.hpp"
+    },
+    "name": "__INTERFACE_HPP",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@S@InterfaceDriver",
+    "What": "Class",
+    "defdec": "Def",
+    "display": "InterfaceDriver",
+    "location": {
+      "column": "7",
+      "line": "4",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\interface.hpp"
+    },
+    "members": [],
+    "name": "InterfaceDriver",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:main.h@26@macro@__MAIN_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -85814,6 +85843,34 @@
       "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\main.h"
     },
     "name": "__MAIN_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Error_Handler#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Error_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\main.h"
+    },
+    "name": "Error_Handler",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@Error_Handler#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void Error_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "9",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\main.h"
+    },
+    "name": "Error_Handler",
     "origin": "user_include",
     "scope": null
   },
@@ -85944,6 +86001,20 @@
     "scope": null
   },
   {
+    "ID": "c:@F@Error_Handler#",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void Error_Handler(void)",
+    "location": {
+      "column": "6",
+      "line": "58",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\main.c"
+    },
+    "name": "Error_Handler",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
     "ID": "c:usart.hpp@27@macro@USART_HPP",
     "What": "MacroDef",
     "defdec": "Def",
@@ -85954,6 +86025,20 @@
       "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
     },
     "name": "USART_HPP",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:usart.hpp@89@macro@RX_LEN_MIN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RX_LEN_MIN",
+    "location": {
+      "column": "9",
+      "line": "7",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+    },
+    "name": "RX_LEN_MIN",
     "origin": "user_include",
     "scope": null
   },
@@ -85972,6 +86057,20 @@
     "scope": null
   },
   {
+    "ID": "c:usart.hpp@120@macro@RX_LEN_MAX",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RX_LEN_MAX",
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+    },
+    "name": "RX_LEN_MAX",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:usart.hpp@119@macro@CMD_1",
     "What": "MacroDef",
     "defdec": "Def",
@@ -85982,6 +86081,20 @@
       "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
     },
     "name": "CMD_1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:usart.hpp@151@macro@RX_HEADER",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RX_HEADER",
+    "location": {
+      "column": "9",
+      "line": "9",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+    },
+    "name": "RX_HEADER",
     "origin": "user_include",
     "scope": null
   },
@@ -86020,219 +86133,419 @@
     "display": "UartDriver",
     "location": {
       "column": "7",
-      "line": "12",
+      "line": "11",
       "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
     },
     "members": [
       {
-        "ID": "c:@S@UartDriver@size",
-        "What": "VarDecl",
-        "defdec": "Dec",
-        "display": "size",
-        "location": {
-          "column": "24",
-          "line": "14",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "size",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@FI@delay",
-        "What": "FieldDecl",
+        "ID": "c:@S@UartDriver",
+        "What": "Class",
         "defdec": "Def",
-        "display": "delay",
+        "display": "UartDriver",
         "location": {
-          "column": "12",
-          "line": "16",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "delay",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@S@buffer",
-        "What": "Struct",
-        "defdec": "Def",
-        "display": "buffer",
-        "location": {
-          "column": "10",
-          "line": "17",
+          "column": "7",
+          "line": "12",
           "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
         },
         "members": [
           {
-            "ID": "c:@S@UartDriver@S@buffer@FI@buffer",
+            "ID": "c:@S@UartDriver@FI@delay",
             "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "delay",
+            "location": {
+              "column": "12",
+              "line": "14",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "delay",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@FI@counter",
+            "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "counter",
+            "location": {
+              "column": "19",
+              "line": "14",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "counter",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@size",
+            "What": "VarDecl",
+            "defdec": "Dec",
+            "display": "size",
+            "location": {
+              "column": "24",
+              "line": "14",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "size",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@S@buffer",
+            "What": "Struct",
             "defdec": "Def",
             "display": "buffer",
             "location": {
-              "column": "13",
-              "line": "19",
+              "column": "10",
+              "line": "15",
               "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
             },
+            "members": [
+              {
+                "ID": "c:@S@UartDriver@FI@delay",
+                "What": "FieldDecl",
+                "defdec": "Def",
+                "display": "delay",
+                "location": {
+                  "column": "12",
+                  "line": "16",
+                  "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+                },
+                "name": "delay",
+                "origin": "user_include",
+                "scope": "UartDriver::UartDriver::buffer"
+              },
+              {
+                "ID": "c:@S@UartDriver@S@buffer",
+                "What": "Struct",
+                "defdec": "Def",
+                "display": "buffer",
+                "location": {
+                  "column": "10",
+                  "line": "17",
+                  "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+                },
+                "members": [
+                  {
+                    "ID": "c:@S@UartDriver@S@buffer@FI@buffer",
+                    "What": "FieldDecl",
+                    "defdec": "Def",
+                    "display": "buffer",
+                    "location": {
+                      "column": "13",
+                      "line": "17",
+                      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+                    },
+                    "name": "buffer",
+                    "origin": "user_include",
+                    "scope": "UartDriver::UartDriver::buffer::buffer"
+                  },
+                  {
+                    "ID": "c:@S@UartDriver@S@buffer@FI@index",
+                    "What": "FieldDecl",
+                    "defdec": "Def",
+                    "display": "index",
+                    "location": {
+                      "column": "13",
+                      "line": "18",
+                      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+                    },
+                    "name": "index",
+                    "origin": "user_include",
+                    "scope": "UartDriver::UartDriver::buffer::buffer"
+                  },
+                  {
+                    "ID": "c:@S@UartDriver@S@buffer@FI@buffer",
+                    "What": "FieldDecl",
+                    "defdec": "Def",
+                    "display": "buffer",
+                    "location": {
+                      "column": "13",
+                      "line": "19",
+                      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+                    },
+                    "name": "buffer",
+                    "origin": "user_include",
+                    "scope": "UartDriver::UartDriver::buffer::buffer"
+                  },
+                  {
+                    "ID": "c:@S@UartDriver@S@buffer@FI@length",
+                    "What": "FieldDecl",
+                    "defdec": "Def",
+                    "display": "length",
+                    "location": {
+                      "column": "14",
+                      "line": "19",
+                      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+                    },
+                    "name": "length",
+                    "origin": "user_include",
+                    "scope": "UartDriver::UartDriver::buffer::buffer"
+                  },
+                  {
+                    "ID": "c:@S@UartDriver@S@buffer@FI@index",
+                    "What": "FieldDecl",
+                    "defdec": "Def",
+                    "display": "index",
+                    "location": {
+                      "column": "13",
+                      "line": "20",
+                      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+                    },
+                    "name": "index",
+                    "origin": "user_include",
+                    "scope": "UartDriver::UartDriver::buffer::buffer"
+                  },
+                  {
+                    "ID": "c:@S@UartDriver@S@buffer@F@FormMessage#",
+                    "What": "CXXMethod",
+                    "defdec": "Dec",
+                    "display": "void FormMessage(void)",
+                    "location": {
+                      "column": "10",
+                      "line": "21",
+                      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+                    },
+                    "name": "FormMessage",
+                    "origin": "user_include",
+                    "scope": "UartDriver::UartDriver::buffer::buffer"
+                  }
+                ],
+                "name": "buffer",
+                "origin": "user_include",
+                "scope": "UartDriver::UartDriver::buffer"
+              },
+              {
+                "ID": "c:@S@UartDriver@FI@Rx",
+                "What": "FieldDecl",
+                "defdec": "Def",
+                "display": "Rx",
+                "location": {
+                  "column": "10",
+                  "line": "22",
+                  "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+                },
+                "name": "Rx",
+                "origin": "user_include",
+                "scope": "UartDriver::UartDriver::buffer"
+              },
+              {
+                "ID": "c:@S@UartDriver@FI@Tx",
+                "What": "FieldDecl",
+                "defdec": "Def",
+                "display": "Tx",
+                "location": {
+                  "column": "21",
+                  "line": "22",
+                  "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+                },
+                "name": "Tx",
+                "origin": "user_include",
+                "scope": "UartDriver::UartDriver::buffer"
+              }
+            ],
             "name": "buffer",
             "origin": "user_include",
-            "scope": "UartDriver::buffer"
+            "scope": "UartDriver::UartDriver"
           },
           {
-            "ID": "c:@S@UartDriver@S@buffer@FI@index",
+            "ID": "c:@S@UartDriver@FI@Rx",
             "What": "FieldDecl",
             "defdec": "Def",
-            "display": "index",
+            "display": "Rx",
             "location": {
-              "column": "13",
-              "line": "20",
+              "column": "10",
+              "line": "23",
               "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
             },
-            "name": "index",
+            "name": "Rx",
             "origin": "user_include",
-            "scope": "UartDriver::buffer"
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@FI@Tx",
+            "What": "FieldDecl",
+            "defdec": "Def",
+            "display": "Tx",
+            "location": {
+              "column": "14",
+              "line": "23",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "Tx",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@UartDriver#",
+            "What": "CXXConstructor",
+            "defdec": "Dec",
+            "display": "void UartDriver(void)",
+            "location": {
+              "column": "3",
+              "line": "24",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "UartDriver",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@UartDriver#",
+            "What": "CXXConstructor",
+            "defdec": "Dec",
+            "display": "void UartDriver(void)",
+            "location": {
+              "column": "3",
+              "line": "24",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "UartDriver",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@UartDriver#",
+            "What": "CXXConstructor",
+            "defdec": "Dec",
+            "display": "void UartDriver(void)",
+            "location": {
+              "column": "3",
+              "line": "25",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "UartDriver",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@Init#",
+            "What": "CXXMethod",
+            "defdec": "Dec",
+            "display": "void Init(void)",
+            "location": {
+              "column": "8",
+              "line": "25",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "Init",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@Init#",
+            "What": "CXXMethod",
+            "defdec": "Dec",
+            "display": "void Init(void)",
+            "location": {
+              "column": "8",
+              "line": "25",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "Init",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@Init#",
+            "What": "CXXMethod",
+            "defdec": "Dec",
+            "display": "void Init(void)",
+            "location": {
+              "column": "8",
+              "line": "26",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "Init",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@Transmit#",
+            "What": "CXXMethod",
+            "defdec": "Dec",
+            "display": "void Transmit(void)",
+            "location": {
+              "column": "8",
+              "line": "26",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "Transmit",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@Transmit#",
+            "What": "CXXMethod",
+            "defdec": "Dec",
+            "display": "void Transmit(void)",
+            "location": {
+              "column": "8",
+              "line": "26",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "Transmit",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@Receive#",
+            "What": "CXXMethod",
+            "defdec": "Dec",
+            "display": "void Receive(void)",
+            "location": {
+              "column": "8",
+              "line": "27",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "Receive",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@Receive#",
+            "What": "CXXMethod",
+            "defdec": "Dec",
+            "display": "void Receive(void)",
+            "location": {
+              "column": "8",
+              "line": "27",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "Receive",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@Transmit#",
+            "What": "CXXMethod",
+            "defdec": "Dec",
+            "display": "void Transmit(void)",
+            "location": {
+              "column": "8",
+              "line": "27",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "Transmit",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
+          },
+          {
+            "ID": "c:@S@UartDriver@F@Receive#",
+            "What": "CXXMethod",
+            "defdec": "Dec",
+            "display": "void Receive(void)",
+            "location": {
+              "column": "8",
+              "line": "28",
+              "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+            },
+            "name": "Receive",
+            "origin": "user_include",
+            "scope": "UartDriver::UartDriver"
           }
         ],
-        "name": "buffer",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@FI@Rx",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "Rx",
-        "location": {
-          "column": "10",
-          "line": "22",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "Rx",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@FI@Tx",
-        "What": "FieldDecl",
-        "defdec": "Def",
-        "display": "Tx",
-        "location": {
-          "column": "21",
-          "line": "22",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "Tx",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@F@UartDriver#",
-        "What": "CXXConstructor",
-        "defdec": "Dec",
-        "display": "void UartDriver(void)",
-        "location": {
-          "column": "3",
-          "line": "24",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
         "name": "UartDriver",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@F@UartDriver#",
-        "What": "CXXConstructor",
-        "defdec": "Dec",
-        "display": "void UartDriver(void)",
-        "location": {
-          "column": "3",
-          "line": "24",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "UartDriver",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@F@Init#",
-        "What": "CXXMethod",
-        "defdec": "Dec",
-        "display": "void Init(void)",
-        "location": {
-          "column": "8",
-          "line": "25",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "Init",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@F@Init#",
-        "What": "CXXMethod",
-        "defdec": "Dec",
-        "display": "void Init(void)",
-        "location": {
-          "column": "8",
-          "line": "25",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "Init",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@F@Transmit#",
-        "What": "CXXMethod",
-        "defdec": "Dec",
-        "display": "void Transmit(void)",
-        "location": {
-          "column": "8",
-          "line": "26",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "Transmit",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@F@Transmit#",
-        "What": "CXXMethod",
-        "defdec": "Dec",
-        "display": "void Transmit(void)",
-        "location": {
-          "column": "8",
-          "line": "26",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "Transmit",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@F@Receive#",
-        "What": "CXXMethod",
-        "defdec": "Dec",
-        "display": "void Receive(void)",
-        "location": {
-          "column": "8",
-          "line": "27",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "Receive",
-        "origin": "user_include",
-        "scope": "UartDriver"
-      },
-      {
-        "ID": "c:@S@UartDriver@F@Receive#",
-        "What": "CXXMethod",
-        "defdec": "Dec",
-        "display": "void Receive(void)",
-        "location": {
-          "column": "8",
-          "line": "27",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
-        },
-        "name": "Receive",
         "origin": "user_include",
         "scope": "UartDriver"
       }
@@ -86263,6 +86576,20 @@
     "location": {
       "column": "19",
       "line": "30",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
+    },
+    "name": "UART",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@UART",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "UART",
+    "location": {
+      "column": "19",
+      "line": "31",
       "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\usart.hpp"
     },
     "name": "UART",

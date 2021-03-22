@@ -2093,6 +2093,9 @@
                 <name>$PROJ_DIR$\..\Src\gpio.cpp</name>
             </file>
             <file>
+                <name>$PROJ_DIR$\..\Src\interface.cpp</name>
+            </file>
+            <file>
                 <name>$PROJ_DIR$\..\Src\main.c</name>
             </file>
             <file>
