@@ -11,8 +11,14 @@
     /* GPIO port B pin configuration */
 #define LED_DEB                 ((uint16_t)0x0002)
 #define DEBUG                   ((uint16_t)0x0004)
-#define LED_CTRL                ((uint16_t)0x0010) 
+#define LED_CTRL                ((uint16_t)0x0010)
+#define BK_DL                   ((uint16_t)0x0020)
+#define BK_SI                   ((uint16_t)0x0100)
 
-void LED_Init(void);
+#define setpin(port, pin)       port |=  pin;
+#define clearpin(port, pin)     port &= ~pin;     
+#define switchpin(port, pin)    port ^=  pin;
+
+void GPIO_Init(void);
 
 #endif

@@ -2389,10 +2389,10 @@
                 <name>$PROJ_DIR$\..\Src\gpio.cpp</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Src\interface.cpp</name>
+                <name>$PROJ_DIR$\..\Src\main.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Src\main.c</name>
+                <name>$PROJ_DIR$\..\Src\pyro.cpp</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Src\stm32l0xx_it.c</name>

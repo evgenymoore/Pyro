@@ -36,7 +36,7 @@
                 </option>
                 <option>
                     <name>Output description</name>
-                    <state>Automatic choice of formatter, with multibyte support.</state>
+                    <state>Automatic choice of formatter, without multibyte support.</state>
                 </option>
                 <option>
                     <name>GOutputBinary</name>
@@ -177,7 +177,7 @@
                 </option>
                 <option>
                     <name>OGPrintfMultibyteSupport</name>
-                    <state>1</state>
+                    <state>0</state>
                 </option>
                 <option>
                     <name>OGScanfVariant</name>
@@ -368,7 +368,7 @@
                 <option>
                     <name>CCOptStrategy</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCOptLevelSlave</name>
@@ -435,7 +435,7 @@
                 <option>
                     <name>CCOptStrategySlave</name>
                     <version>0</version>
-                    <state>0</state>
+                    <state>1</state>
                 </option>
                 <option>
                     <name>CCGuardCalls</name>
@@ -2093,10 +2093,10 @@
                 <name>$PROJ_DIR$\..\Src\gpio.cpp</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Src\interface.cpp</name>
+                <name>$PROJ_DIR$\..\Src\main.c</name>
             </file>
             <file>
-                <name>$PROJ_DIR$\..\Src\main.c</name>
+                <name>$PROJ_DIR$\..\Src\pyro.cpp</name>
             </file>
             <file>
                 <name>$PROJ_DIR$\..\Src\stm32l0xx_it.c</name>

@@ -4,27 +4,29 @@
 #include "gpio.hpp"
 #include "tim.h"
 
-#define RX_HEADER       0xAA
-#define CMD_1           0x01
-#define CMD_2           0x02
-#define CMD_3           0x03
+#define HEADER          0xAA
 
-class UartDriver {
-private:
-  static const uint8_t size = 5;
-public:
-  uint16_t delay;
-  struct buffer
-  {
-    uint8_t buffer[size];
-    uint8_t index;
-  };
-  buffer Rx; buffer Tx;
- 
-  UartDriver();
-  void Init();
-  void Transmit();
-  void Receive();
+class UartDriver 
+{
+  private:
+    uint16_t delay;
+    static const uint8_t size = 5;
+    void Delay();
+  public:
+    struct buffer
+    {
+      uint8_t buffer[size];
+      uint8_t index;
+      
+      void FormMessage(uint8_t* buffer);
+      uint8_t CxR(uint8_t* buffer);
+    };
+    buffer Rx, Tx;
+   
+    UartDriver();
+    void Init();
+    void Transmit();
+    void Receive();
 };
 
 extern UartDriver UART;

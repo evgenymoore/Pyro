@@ -6,7 +6,12 @@ void TIM6_IRQHandler(void)
   TIM6->SR = 0;
 }
 
-void USART1_IRQHandler(void) {}
+void USART1_IRQHandler(void)
+{
+  /* UART error handler */
+  if (USART1->ISR & (USART_ISR_ORE | USART_ISR_FE | USART_ISR_NE))
+    USART1->ICR = 0xFF;
+}
 
 void DMA1_Channel2_3_IRQHandler(void)
 {
@@ -14,23 +19,21 @@ void DMA1_Channel2_3_IRQHandler(void)
   {
     /* clear the status register */
     DMA1->IFCR |= (0xFF << 8); 
-    
-    if (UART.Rx.buffer[0] == RX_HEADER)
+    if (UART.Rx.buffer[0] == HEADER)
     {
-      switch (UART.Rx.buffer[1])
-      {
-        case CMD_1 : UART.Tx.buffer[4] = CMD_1;
-                     break;
-        case CMD_2 : UART.Tx.buffer[4] = CMD_2;
-                     break;
-        case CMD_3 : UART.Tx.buffer[4] = CMD_3;
-                     break;
-        default : UART.Tx.buffer[4] = 0x00;
-      }
+      UART.Tx.FormMessage(UART.Rx.buffer);
       UART.Transmit();
       UART.Rx.buffer[0] = 0x00;
     }
-    GPIOB->ODR ^= LED_CTRL;
+    switchpin(GPIOB->ODR, LED_CTRL);
     UART.Receive();
   }
+}
+
+void EXTI4_15_IRQHandler(void)
+{
+  EXTI->PR |= EXTI_PR_PR8;
+
+  clearpin(EXTI->IMR, EXTI_IMR_IM8);  //запрет прерывания по pin8 (event)
+  Pyro.Read();
 }

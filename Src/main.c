@@ -7,12 +7,12 @@ int main(void)
   SystemClockSetting();
   SystemCoreClockUpdate();
   
-  LED_Init();
+  GPIO_Init();
   
   UART.Init();
   UART.Receive();
   
-  TIM6_Init((uint16_t)(SystemCoreClock / 1000), 100);
+  TIM6_Init((uint16_t)(SystemCoreClock / 1000), 1000);
   TIM_Enable(TIM6); 
   
   while (1) {}

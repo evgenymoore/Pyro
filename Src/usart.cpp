@@ -2,16 +2,9 @@
 
 UartDriver UART;
 
-UartDriver::UartDriver()
-{
-  UART.Tx.buffer[0] = 'e';
-  UART.Tx.buffer[1] = 'c';
-  UART.Tx.buffer[2] = 'h';
-  UART.Tx.buffer[3] = 'o';
-  UART.Tx.buffer[4] = 0x00;
-}
+UartDriver::UartDriver() {}
 
-void UartDriver::Init(void)
+void UartDriver::Init()
 {
  /*!< CLOCK CONFIGURATION */
   RCC->AHBENR  |= RCC_AHBENR_DMAEN;
@@ -48,13 +41,17 @@ void UartDriver::Init(void)
   /* all the rest configs */
   DMA1_Channel3->CCR |= DMA_CCR_TCIE | DMA_CCR_MINC | DMA_CCR_PL_1;
   DMA1_Channel3->CPAR = (uint32_t)&(USART1->RDR);
-  DMA1_Channel3->CMAR = (uint32_t)(UartDriver::Rx.buffer);
-  DMA1_Channel3->CNDTR = sizeof(UartDriver::Rx.buffer);
+  DMA1_Channel3->CMAR = (uint32_t)(Rx.buffer);
+  DMA1_Channel3->CNDTR = sizeof(Rx.buffer);
   
   NVIC_EnableIRQ(DMA1_Channel2_3_IRQn);
   NVIC_SetPriority(DMA1_Channel2_3_IRQn, 0);
   
+  NVIC_EnableIRQ(USART1_IRQn);
+  NVIC_SetPriority(USART1_IRQn, 0);
+  
   /* transmit and receive enable */
+  USART1->CR3 |= USART_CR3_EIE;
   USART1->CR1 |= USART_CR1_TE | USART_CR1_RE | USART_CR1_UE;
 }
 
@@ -64,13 +61,13 @@ void UartDriver::Transmit(void)
   USART1->ICR |= USART_ICR_TCCF;
   if (!(USART1->ISR & USART_ISR_TC)) 
   {
-    while (UART.Tx.index < sizeof(UART.Tx.buffer)) {
-      USART1->TDR = UART.Tx.buffer[UART.Tx.index++];
+    while (Tx.index < sizeof(Tx.buffer)) 
+    {
+      USART1->TDR = Tx.buffer[Tx.index++];
       USART1->ICR |= USART_ICR_TCCF;
-      while (UART.delay++ < 1000) {}
-      UART.delay = 0;
+      Delay();
     }
-    UART.Tx.index = 0;
+    Tx.index = 0;
   }  
 }
 
@@ -78,6 +75,28 @@ void UartDriver::Receive()
 {
   GPIOA->BSRR |= RE_DE << 16;
   DMA1_Channel3->CCR &= ~DMA_CCR_EN;
-  DMA1_Channel3->CNDTR = sizeof(UartDriver::Rx.buffer);
+  DMA1_Channel3->CNDTR = sizeof(Rx.buffer);
   DMA1_Channel3->CCR |=  DMA_CCR_EN;
+}
+
+void UartDriver::Delay(void)
+{
+  while (delay++ < 1000) {}
+  delay = 0;
+}
+
+void UartDriver::buffer::FormMessage(uint8_t* buffer)
+{
+  buffer::buffer[0] = HEADER;
+  (buffer[1] != 0x0) ? (buffer::buffer[1] = buffer[1]) : 
+                       (buffer::buffer[1] = 0xFF);
+  buffer::buffer[4] = CxR(buffer);                    
+}
+
+uint8_t UartDriver::buffer::CxR(uint8_t* buffer)
+{
+  uint8_t CxR = 0;
+  for (uint8_t i = 1; i < sizeof(buffer); i++)
+    CxR ^= buffer[i];
+  return CxR;
 }

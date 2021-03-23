@@ -5,6 +5,7 @@
 
 #include "gpio.hpp"
 #include "usart.hpp"
+#include "pyro.hpp"
 
 void Error_Handler(void);
 
