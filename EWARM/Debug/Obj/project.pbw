@@ -82148,342 +82148,6 @@
     "scope": null
   },
   {
-    "ID": "c:DLib_Defaults.h@1171@macro@_DLIB_DEFAULTS_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_DEFAULTS_H",
-    "location": {
-      "column": "9",
-      "line": "31",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_DEFAULTS_H",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@3450@macro@_DLIB_STDOUT_USES_STATIC_BUFFER",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_STDOUT_USES_STATIC_BUFFER",
-    "location": {
-      "column": "11",
-      "line": "100",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_STDOUT_USES_STATIC_BUFFER",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@4651@macro@_DLIB_LOCALE_TABLE_MEMORY",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_LOCALE_TABLE_MEMORY",
-    "location": {
-      "column": "11",
-      "line": "135",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_LOCALE_TABLE_MEMORY",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@6976@macro@_DLIB_PRINTF_MULTIBYTE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_PRINTF_MULTIBYTE",
-    "location": {
-      "column": "11",
-      "line": "213",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_PRINTF_MULTIBYTE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@7891@macro@_DLIB_PRINTF_INT_TYPE_IS_INT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_PRINTF_INT_TYPE_IS_INT",
-    "location": {
-      "column": "11",
-      "line": "238",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_PRINTF_INT_TYPE_IS_INT",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@8494@macro@_DLIB_PRINTF_INT_TYPE_IS_LONG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_PRINTF_INT_TYPE_IS_LONG",
-    "location": {
-      "column": "11",
-      "line": "255",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_PRINTF_INT_TYPE_IS_LONG",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@9340@macro@_DLIB_PRINTF_CHAR_BY_CHAR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_PRINTF_CHAR_BY_CHAR",
-    "location": {
-      "column": "11",
-      "line": "277",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_PRINTF_CHAR_BY_CHAR",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@10027@macro@_DLIB_SCANF_MULTIBYTE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_SCANF_MULTIBYTE",
-    "location": {
-      "column": "11",
-      "line": "301",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_SCANF_MULTIBYTE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@10675@macro@_DLIB_STRFTIME_MULTIBYTE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_STRFTIME_MULTIBYTE",
-    "location": {
-      "column": "11",
-      "line": "321",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_STRFTIME_MULTIBYTE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@11259@macro@_DLIB_QSORT_USE_BUBBLE_SORT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_QSORT_USE_BUBBLE_SORT",
-    "location": {
-      "column": "11",
-      "line": "340",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_QSORT_USE_BUBBLE_SORT",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@11823@macro@_DLIB_RAND_USE_SIMPLE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_RAND_USE_SIMPLE",
-    "location": {
-      "column": "11",
-      "line": "365",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_RAND_USE_SIMPLE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@12009@macro@_DLIB_DEBUG_BREAK_FUNCTION_ATTRIBUTE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_DEBUG_BREAK_FUNCTION_ATTRIBUTE",
-    "location": {
-      "column": "11",
-      "line": "374",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_DEBUG_BREAK_FUNCTION_ATTRIBUTE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@12728@macro@_DLIB_DATA_ATTR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_DATA_ATTR",
-    "location": {
-      "column": "11",
-      "line": "390",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_DATA_ATTR",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@12819@macro@_DLIB_CONST_ATTR",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_CONST_ATTR",
-    "location": {
-      "column": "13",
-      "line": "395",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_CONST_ATTR",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@13437@macro@_DLIB_MBSTATET_USES_UNSIGNED_LONG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_MBSTATET_USES_UNSIGNED_LONG",
-    "location": {
-      "column": "15",
-      "line": "421",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_MBSTATET_USES_UNSIGNED_LONG",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@13620@macro@_DLIB_TIME_USES_LONG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_TIME_USES_LONG",
-    "location": {
-      "column": "15",
-      "line": "429",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_TIME_USES_LONG",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@14167@macro@_DLIB_AEABI_DIFUNC_CONTAINS_OFFSETS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_AEABI_DIFUNC_CONTAINS_OFFSETS",
-    "location": {
-      "column": "13",
-      "line": "443",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_AEABI_DIFUNC_CONTAINS_OFFSETS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@14781@macro@_DLIB_FAST_FMA",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_FAST_FMA",
-    "location": {
-      "column": "11",
-      "line": "471",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_FAST_FMA",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@15681@macro@_DLIB_INCLUDE_DLMALLOC_ALTERNATIVE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_INCLUDE_DLMALLOC_ALTERNATIVE",
-    "location": {
-      "column": "13",
-      "line": "501",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_INCLUDE_DLMALLOC_ALTERNATIVE",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@16068@macro@_DLIB_TIME_ALLOW_64",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_TIME_ALLOW_64",
-    "location": {
-      "column": "13",
-      "line": "523",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_TIME_ALLOW_64",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@16271@macro@_DLIB_TIME_USES_64_DEFAULT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_TIME_USES_64_DEFAULT",
-    "location": {
-      "column": "11",
-      "line": "537",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_TIME_USES_64_DEFAULT",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@16525@macro@_DLIB_ALLOW_LARGE_CONSTANT_TABLES_FOR_MATH",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "_DLIB_ALLOW_LARGE_CONSTANT_TABLES_FOR_MATH",
-    "location": {
-      "column": "11",
-      "line": "548",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "_DLIB_ALLOW_LARGE_CONSTANT_TABLES_FOR_MATH",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@16925@macro@__WEAK",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__WEAK",
-    "location": {
-      "column": "11",
-      "line": "565",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "__WEAK",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
-    "ID": "c:DLib_Defaults.h@16980@macro@__WEAK_DEFS",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__WEAK_DEFS",
-    "location": {
-      "column": "11",
-      "line": "566",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
-    },
-    "name": "__WEAK_DEFS",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:stdint.h@101@macro@_STDINT",
     "What": "MacroDef",
     "defdec": "Def",
@@ -82904,20 +82568,6 @@
     "scope": null
   },
   {
-    "ID": "c:stdint.h@T@__data_intptr_t",
-    "What": "Typedef",
-    "defdec": "Def",
-    "display": "int",
-    "location": {
-      "column": "1",
-      "line": "89",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\stdint.h"
-    },
-    "name": "__data_intptr_t",
-    "origin": "system_include",
-    "scope": null
-  },
-  {
     "ID": "c:stdint.h@T@__data_uintptr_t",
     "What": "Typedef",
     "defdec": "Def",
@@ -82928,6 +82578,20 @@
       "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\stdint.h"
     },
     "name": "__data_uintptr_t",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stdint.h@T@__data_intptr_t",
+    "What": "Typedef",
+    "defdec": "Def",
+    "display": "int",
+    "location": {
+      "column": "1",
+      "line": "89",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\stdint.h"
+    },
+    "name": "__data_intptr_t",
     "origin": "system_include",
     "scope": null
   },
@@ -85034,6 +84698,348 @@
     "scope": null
   },
   {
+    "ID": "c:stm32l0xx.h@1685@macro@__STM32L0xx_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__STM32L0xx_H",
+    "location": {
+      "column": "9",
+      "line": "41",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "__STM32L0xx_H",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@1899@macro@STM32L0",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "STM32L0",
+    "location": {
+      "column": "9",
+      "line": "55",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "STM32L0",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@6800@macro@__STM32L0xx_CMSIS_VERSION_MAIN",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__STM32L0xx_CMSIS_VERSION_MAIN",
+    "location": {
+      "column": "9",
+      "line": "106",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "__STM32L0xx_CMSIS_VERSION_MAIN",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@6878@macro@__STM32L0xx_CMSIS_VERSION_SUB1",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__STM32L0xx_CMSIS_VERSION_SUB1",
+    "location": {
+      "column": "9",
+      "line": "107",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "__STM32L0xx_CMSIS_VERSION_SUB1",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@6956@macro@__STM32L0xx_CMSIS_VERSION_SUB2",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__STM32L0xx_CMSIS_VERSION_SUB2",
+    "location": {
+      "column": "9",
+      "line": "108",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "__STM32L0xx_CMSIS_VERSION_SUB2",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@7034@macro@__STM32L0xx_CMSIS_VERSION_RC",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__STM32L0xx_CMSIS_VERSION_RC",
+    "location": {
+      "column": "9",
+      "line": "109",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "__STM32L0xx_CMSIS_VERSION_RC",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@7116@macro@__STM32L0xx_CMSIS_VERSION",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__STM32L0xx_CMSIS_VERSION",
+    "location": {
+      "column": "9",
+      "line": "110",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "__STM32L0xx_CMSIS_VERSION",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@FlagStatus",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@FlagStatus@RESET",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "RESET",
+        "location": {
+          "column": "3",
+          "line": "175",
+          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+        },
+        "name": "RESET",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@FlagStatus@SET",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "SET",
+        "location": {
+          "column": "3",
+          "line": "176",
+          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+        },
+        "name": "SET",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "173",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@FunctionalState",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@FunctionalState@DISABLE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "DISABLE",
+        "location": {
+          "column": "3",
+          "line": "181",
+          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+        },
+        "name": "DISABLE",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@FunctionalState@ENABLE",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "ENABLE",
+        "location": {
+          "column": "3",
+          "line": "182",
+          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+        },
+        "name": "ENABLE",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "179",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@9020@macro@IS_FUNCTIONAL_STATE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "IS_FUNCTIONAL_STATE",
+    "location": {
+      "column": "9",
+      "line": "184",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "IS_FUNCTIONAL_STATE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@EA@ErrorStatus",
+    "What": "Enum",
+    "defdec": "Def",
+    "display": "",
+    "fields": [
+      {
+        "ID": "c:@EA@ErrorStatus@SUCCESS",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "SUCCESS",
+        "location": {
+          "column": "3",
+          "line": "188",
+          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+        },
+        "name": "SUCCESS",
+        "origin": "user_include",
+        "scope": null
+      },
+      {
+        "ID": "c:@EA@ErrorStatus@ERROR",
+        "What": "Enumerator",
+        "defdec": "Def",
+        "display": "ERROR",
+        "location": {
+          "column": "3",
+          "line": "189",
+          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+        },
+        "name": "ERROR",
+        "origin": "user_include",
+        "scope": null
+      }
+    ],
+    "location": {
+      "column": "9",
+      "line": "186",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@9245@macro@SET_BIT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SET_BIT",
+    "location": {
+      "column": "9",
+      "line": "200",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "SET_BIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@9295@macro@CLEAR_BIT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CLEAR_BIT",
+    "location": {
+      "column": "9",
+      "line": "202",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "CLEAR_BIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@9346@macro@READ_BIT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "READ_BIT",
+    "location": {
+      "column": "9",
+      "line": "204",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "READ_BIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@9395@macro@CLEAR_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CLEAR_REG",
+    "location": {
+      "column": "9",
+      "line": "206",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "CLEAR_REG",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@9444@macro@WRITE_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "WRITE_REG",
+    "location": {
+      "column": "9",
+      "line": "208",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "WRITE_REG",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@9493@macro@READ_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "READ_REG",
+    "location": {
+      "column": "9",
+      "line": "210",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "READ_REG",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:stm32l0xx.h@9534@macro@MODIFY_REG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "MODIFY_REG",
+    "location": {
+      "column": "9",
+      "line": "212",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
+    },
+    "name": "MODIFY_REG",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Product.h@75@macro@_DLIB_PRODUCTS_H_",
     "What": "MacroDef",
     "defdec": "Def",
@@ -85370,6 +85376,552 @@
     "scope": null
   },
   {
+    "ID": "c:system_stm32l0xx.c@1857@macro@HSE_VALUE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "HSE_VALUE",
+    "location": {
+      "column": "11",
+      "line": "51",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "HSE_VALUE",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32l0xx.c@2002@macro@MSI_VALUE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "MSI_VALUE",
+    "location": {
+      "column": "11",
+      "line": "55",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "MSI_VALUE",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32l0xx.c@2146@macro@HSI_VALUE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "HSI_VALUE",
+    "location": {
+      "column": "11",
+      "line": "59",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "HSI_VALUE",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32l0xx.c@2662@macro@VECT_TAB_OFFSET",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "VECT_TAB_OFFSET",
+    "location": {
+      "column": "9",
+      "line": "83",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "VECT_TAB_OFFSET",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@SystemCoreClock",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "SystemCoreClock",
+    "location": {
+      "column": "12",
+      "line": "109",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "SystemCoreClock",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@AHBPrescTable",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "AHBPrescTable",
+    "location": {
+      "column": "17",
+      "line": "110",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "AHBPrescTable",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@APBPrescTable",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "APBPrescTable",
+    "location": {
+      "column": "17",
+      "line": "111",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "APBPrescTable",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@PLLMulTable",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "PLLMulTable",
+    "location": {
+      "column": "17",
+      "line": "112",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "PLLMulTable",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SystemInit",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SystemInit(void)",
+    "location": {
+      "column": "6",
+      "line": "135",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "SystemInit",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@SystemCoreClockUpdate",
+    "What": "Function",
+    "defdec": "Def",
+    "display": "void SystemCoreClockUpdate(void)",
+    "location": {
+      "column": "6",
+      "line": "204",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "SystemCoreClockUpdate",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32l0xx.c@7005@F@SystemCoreClockUpdate@tmp",
+    "What": "Variable",
+    "defdec": "Def",
+    "display": "tmp",
+    "location": {
+      "column": "12",
+      "line": "206",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "tmp",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32l0xx.c@7005@F@SystemCoreClockUpdate@pllmul",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "pllmul",
+    "location": {
+      "column": "22",
+      "line": "206",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "pllmul",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32l0xx.c@7005@F@SystemCoreClockUpdate@plldiv",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "plldiv",
+    "location": {
+      "column": "35",
+      "line": "206",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "plldiv",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32l0xx.c@7005@F@SystemCoreClockUpdate@pllsource",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "pllsource",
+    "location": {
+      "column": "48",
+      "line": "206",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "pllsource",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:system_stm32l0xx.c@7005@F@SystemCoreClockUpdate@msirange",
+    "What": "Variable",
+    "defdec": "Dec",
+    "display": "msirange",
+    "location": {
+      "column": "64",
+      "line": "206",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
+    },
+    "name": "msirange",
+    "origin": "project_file",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@1171@macro@_DLIB_DEFAULTS_H",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_DEFAULTS_H",
+    "location": {
+      "column": "9",
+      "line": "31",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_DEFAULTS_H",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@3450@macro@_DLIB_STDOUT_USES_STATIC_BUFFER",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_STDOUT_USES_STATIC_BUFFER",
+    "location": {
+      "column": "11",
+      "line": "100",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_STDOUT_USES_STATIC_BUFFER",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@4651@macro@_DLIB_LOCALE_TABLE_MEMORY",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_LOCALE_TABLE_MEMORY",
+    "location": {
+      "column": "11",
+      "line": "135",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_LOCALE_TABLE_MEMORY",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@6976@macro@_DLIB_PRINTF_MULTIBYTE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_PRINTF_MULTIBYTE",
+    "location": {
+      "column": "11",
+      "line": "213",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_PRINTF_MULTIBYTE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@7891@macro@_DLIB_PRINTF_INT_TYPE_IS_INT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_PRINTF_INT_TYPE_IS_INT",
+    "location": {
+      "column": "11",
+      "line": "238",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_PRINTF_INT_TYPE_IS_INT",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@8494@macro@_DLIB_PRINTF_INT_TYPE_IS_LONG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_PRINTF_INT_TYPE_IS_LONG",
+    "location": {
+      "column": "11",
+      "line": "255",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_PRINTF_INT_TYPE_IS_LONG",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@9340@macro@_DLIB_PRINTF_CHAR_BY_CHAR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_PRINTF_CHAR_BY_CHAR",
+    "location": {
+      "column": "11",
+      "line": "277",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_PRINTF_CHAR_BY_CHAR",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@10027@macro@_DLIB_SCANF_MULTIBYTE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_SCANF_MULTIBYTE",
+    "location": {
+      "column": "11",
+      "line": "301",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_SCANF_MULTIBYTE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@10675@macro@_DLIB_STRFTIME_MULTIBYTE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_STRFTIME_MULTIBYTE",
+    "location": {
+      "column": "11",
+      "line": "321",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_STRFTIME_MULTIBYTE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@11259@macro@_DLIB_QSORT_USE_BUBBLE_SORT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_QSORT_USE_BUBBLE_SORT",
+    "location": {
+      "column": "11",
+      "line": "340",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_QSORT_USE_BUBBLE_SORT",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@11823@macro@_DLIB_RAND_USE_SIMPLE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_RAND_USE_SIMPLE",
+    "location": {
+      "column": "11",
+      "line": "365",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_RAND_USE_SIMPLE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@12009@macro@_DLIB_DEBUG_BREAK_FUNCTION_ATTRIBUTE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_DEBUG_BREAK_FUNCTION_ATTRIBUTE",
+    "location": {
+      "column": "11",
+      "line": "374",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_DEBUG_BREAK_FUNCTION_ATTRIBUTE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@12728@macro@_DLIB_DATA_ATTR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_DATA_ATTR",
+    "location": {
+      "column": "11",
+      "line": "390",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_DATA_ATTR",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@12819@macro@_DLIB_CONST_ATTR",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_CONST_ATTR",
+    "location": {
+      "column": "13",
+      "line": "395",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_CONST_ATTR",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@13437@macro@_DLIB_MBSTATET_USES_UNSIGNED_LONG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_MBSTATET_USES_UNSIGNED_LONG",
+    "location": {
+      "column": "15",
+      "line": "421",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_MBSTATET_USES_UNSIGNED_LONG",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@13620@macro@_DLIB_TIME_USES_LONG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_TIME_USES_LONG",
+    "location": {
+      "column": "15",
+      "line": "429",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_TIME_USES_LONG",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@14167@macro@_DLIB_AEABI_DIFUNC_CONTAINS_OFFSETS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_AEABI_DIFUNC_CONTAINS_OFFSETS",
+    "location": {
+      "column": "13",
+      "line": "443",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_AEABI_DIFUNC_CONTAINS_OFFSETS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@14781@macro@_DLIB_FAST_FMA",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_FAST_FMA",
+    "location": {
+      "column": "11",
+      "line": "471",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_FAST_FMA",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@15681@macro@_DLIB_INCLUDE_DLMALLOC_ALTERNATIVE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_INCLUDE_DLMALLOC_ALTERNATIVE",
+    "location": {
+      "column": "13",
+      "line": "501",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_INCLUDE_DLMALLOC_ALTERNATIVE",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@16068@macro@_DLIB_TIME_ALLOW_64",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_TIME_ALLOW_64",
+    "location": {
+      "column": "13",
+      "line": "523",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_TIME_ALLOW_64",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@16271@macro@_DLIB_TIME_USES_64_DEFAULT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_TIME_USES_64_DEFAULT",
+    "location": {
+      "column": "11",
+      "line": "537",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_TIME_USES_64_DEFAULT",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@16525@macro@_DLIB_ALLOW_LARGE_CONSTANT_TABLES_FOR_MATH",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "_DLIB_ALLOW_LARGE_CONSTANT_TABLES_FOR_MATH",
+    "location": {
+      "column": "11",
+      "line": "548",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "_DLIB_ALLOW_LARGE_CONSTANT_TABLES_FOR_MATH",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@16925@macro@__WEAK",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__WEAK",
+    "location": {
+      "column": "11",
+      "line": "565",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "__WEAK",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:DLib_Defaults.h@16980@macro@__WEAK_DEFS",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__WEAK_DEFS",
+    "location": {
+      "column": "11",
+      "line": "566",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\DLib_Defaults.h"
+    },
+    "name": "__WEAK_DEFS",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
     "ID": "c:DLib_Config_Full.h@105@macro@_DLIB_CONFIG_H",
     "What": "MacroDef",
     "defdec": "Def",
@@ -85451,216 +86003,6 @@
     },
     "name": "__CORE_CMINSTR_H",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@26@macro@GPIO_HPP",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "GPIO_HPP",
-    "location": {
-      "column": "9",
-      "line": "2",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "GPIO_HPP",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@115@macro@TXD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "TXD",
-    "location": {
-      "column": "9",
-      "line": "7",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "TXD",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@167@macro@RXD",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "RXD",
-    "location": {
-      "column": "9",
-      "line": "8",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "RXD",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@219@macro@RE_DE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "RE_DE",
-    "location": {
-      "column": "9",
-      "line": "9",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "RE_DE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@314@macro@LED_DEB",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LED_DEB",
-    "location": {
-      "column": "9",
-      "line": "12",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "LED_DEB",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@377@macro@DEBUG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "DEBUG",
-    "location": {
-      "column": "9",
-      "line": "13",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "DEBUG",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@440@macro@LED_CTRL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "LED_CTRL",
-    "location": {
-      "column": "9",
-      "line": "14",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "LED_CTRL",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@503@macro@BK_SI",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "BK_SI",
-    "location": {
-      "column": "9",
-      "line": "15",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "BK_SI",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@566@macro@BK_DL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "BK_DL",
-    "location": {
-      "column": "9",
-      "line": "16",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "BK_DL",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@631@macro@SETBIT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "SETBIT",
-    "location": {
-      "column": "9",
-      "line": "18",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "SETBIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@678@macro@CLEARBIT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CLEARBIT",
-    "location": {
-      "column": "9",
-      "line": "19",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "CLEARBIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:gpio.hpp@730@macro@SWITCHBIT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "SWITCHBIT",
-    "location": {
-      "column": "9",
-      "line": "20",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "SWITCHBIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIO_Init#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIO_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "22",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "GPIO_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@GPIO_Init#",
-    "What": "Function",
-    "defdec": "Dec",
-    "display": "void GPIO_Init(void)",
-    "location": {
-      "column": "6",
-      "line": "22",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
-    },
-    "name": "GPIO_Init",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:ycheck.h@1402@macro@__AEABI_PORTABILITY_INTERNAL_LEVEL",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
-    "location": {
-      "column": "11",
-      "line": "42",
-      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\ycheck.h"
-    },
-    "name": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
-    "origin": "system_include",
     "scope": null
   },
   {
@@ -85856,6 +86198,216 @@
       "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\system_stm32l0xx.h"
     },
     "name": "SystemCoreClockUpdate",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:ycheck.h@1402@macro@__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "location": {
+      "column": "11",
+      "line": "42",
+      "path": "E:\\Program Files\\IAR Systems\\Embedded Workbench 8.2\\arm\\inc\\c\\ycheck.h"
+    },
+    "name": "__AEABI_PORTABILITY_INTERNAL_LEVEL",
+    "origin": "system_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@26@macro@GPIO_HPP",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "GPIO_HPP",
+    "location": {
+      "column": "9",
+      "line": "2",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "GPIO_HPP",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@115@macro@TXD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "TXD",
+    "location": {
+      "column": "9",
+      "line": "7",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "TXD",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@167@macro@RXD",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RXD",
+    "location": {
+      "column": "9",
+      "line": "8",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "RXD",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@219@macro@RE_DE",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "RE_DE",
+    "location": {
+      "column": "9",
+      "line": "9",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "RE_DE",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@314@macro@LED_DEB",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LED_DEB",
+    "location": {
+      "column": "9",
+      "line": "12",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "LED_DEB",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@377@macro@DEBUG",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "DEBUG",
+    "location": {
+      "column": "9",
+      "line": "13",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "DEBUG",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@440@macro@LED_CTRL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "LED_CTRL",
+    "location": {
+      "column": "9",
+      "line": "14",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "LED_CTRL",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@503@macro@BK_SI",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "BK_SI",
+    "location": {
+      "column": "9",
+      "line": "15",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "BK_SI",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@566@macro@BK_DL",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "BK_DL",
+    "location": {
+      "column": "9",
+      "line": "16",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "BK_DL",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@631@macro@SETBIT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SETBIT",
+    "location": {
+      "column": "9",
+      "line": "18",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "SETBIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@678@macro@CLEARBIT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "CLEARBIT",
+    "location": {
+      "column": "9",
+      "line": "19",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "CLEARBIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:gpio.hpp@730@macro@SWITCHBIT",
+    "What": "MacroDef",
+    "defdec": "Def",
+    "display": "SWITCHBIT",
+    "location": {
+      "column": "9",
+      "line": "20",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "SWITCHBIT",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Init#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "GPIO_Init",
+    "origin": "user_include",
+    "scope": null
+  },
+  {
+    "ID": "c:@F@GPIO_Init#",
+    "What": "Function",
+    "defdec": "Dec",
+    "display": "void GPIO_Init(void)",
+    "location": {
+      "column": "6",
+      "line": "22",
+      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Inc\\gpio.hpp"
+    },
+    "name": "GPIO_Init",
     "origin": "user_include",
     "scope": null
   },
@@ -88004,7 +88556,7 @@
     "display": "void USART1_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "16",
+      "line": "17",
       "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\stm32l0xx_it.c"
     },
     "name": "USART1_IRQHandler",
@@ -88018,7 +88570,7 @@
     "display": "void DMA1_Channel2_3_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "23",
+      "line": "24",
       "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\stm32l0xx_it.c"
     },
     "name": "DMA1_Channel2_3_IRQHandler",
@@ -88032,7 +88584,7 @@
     "display": "void EXTI4_15_IRQHandler(void)",
     "location": {
       "column": "6",
-      "line": "39",
+      "line": "40",
       "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\stm32l0xx_it.c"
     },
     "name": "EXTI4_15_IRQHandler",
@@ -88107,558 +88659,6 @@
     },
     "name": "DMA1_Channel2_3_IRQHandler",
     "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@1685@macro@__STM32L0xx_H",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__STM32L0xx_H",
-    "location": {
-      "column": "9",
-      "line": "41",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "__STM32L0xx_H",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@1899@macro@STM32L0",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "STM32L0",
-    "location": {
-      "column": "9",
-      "line": "55",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "STM32L0",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@6800@macro@__STM32L0xx_CMSIS_VERSION_MAIN",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__STM32L0xx_CMSIS_VERSION_MAIN",
-    "location": {
-      "column": "9",
-      "line": "106",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "__STM32L0xx_CMSIS_VERSION_MAIN",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@6878@macro@__STM32L0xx_CMSIS_VERSION_SUB1",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__STM32L0xx_CMSIS_VERSION_SUB1",
-    "location": {
-      "column": "9",
-      "line": "107",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "__STM32L0xx_CMSIS_VERSION_SUB1",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@6956@macro@__STM32L0xx_CMSIS_VERSION_SUB2",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__STM32L0xx_CMSIS_VERSION_SUB2",
-    "location": {
-      "column": "9",
-      "line": "108",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "__STM32L0xx_CMSIS_VERSION_SUB2",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@7034@macro@__STM32L0xx_CMSIS_VERSION_RC",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__STM32L0xx_CMSIS_VERSION_RC",
-    "location": {
-      "column": "9",
-      "line": "109",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "__STM32L0xx_CMSIS_VERSION_RC",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@7116@macro@__STM32L0xx_CMSIS_VERSION",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "__STM32L0xx_CMSIS_VERSION",
-    "location": {
-      "column": "9",
-      "line": "110",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "__STM32L0xx_CMSIS_VERSION",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@FlagStatus",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@FlagStatus@RESET",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "RESET",
-        "location": {
-          "column": "3",
-          "line": "175",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-        },
-        "name": "RESET",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@FlagStatus@SET",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "SET",
-        "location": {
-          "column": "3",
-          "line": "176",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-        },
-        "name": "SET",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
-      "line": "173",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@FunctionalState",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@FunctionalState@DISABLE",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "DISABLE",
-        "location": {
-          "column": "3",
-          "line": "181",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-        },
-        "name": "DISABLE",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@FunctionalState@ENABLE",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "ENABLE",
-        "location": {
-          "column": "3",
-          "line": "182",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-        },
-        "name": "ENABLE",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
-      "line": "179",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@9020@macro@IS_FUNCTIONAL_STATE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "IS_FUNCTIONAL_STATE",
-    "location": {
-      "column": "9",
-      "line": "184",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "IS_FUNCTIONAL_STATE",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:@EA@ErrorStatus",
-    "What": "Enum",
-    "defdec": "Def",
-    "display": "",
-    "fields": [
-      {
-        "ID": "c:@EA@ErrorStatus@SUCCESS",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "SUCCESS",
-        "location": {
-          "column": "3",
-          "line": "188",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-        },
-        "name": "SUCCESS",
-        "origin": "user_include",
-        "scope": null
-      },
-      {
-        "ID": "c:@EA@ErrorStatus@ERROR",
-        "What": "Enumerator",
-        "defdec": "Def",
-        "display": "ERROR",
-        "location": {
-          "column": "3",
-          "line": "189",
-          "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-        },
-        "name": "ERROR",
-        "origin": "user_include",
-        "scope": null
-      }
-    ],
-    "location": {
-      "column": "9",
-      "line": "186",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@9245@macro@SET_BIT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "SET_BIT",
-    "location": {
-      "column": "9",
-      "line": "200",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "SET_BIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@9295@macro@CLEAR_BIT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CLEAR_BIT",
-    "location": {
-      "column": "9",
-      "line": "202",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "CLEAR_BIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@9346@macro@READ_BIT",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "READ_BIT",
-    "location": {
-      "column": "9",
-      "line": "204",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "READ_BIT",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@9395@macro@CLEAR_REG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "CLEAR_REG",
-    "location": {
-      "column": "9",
-      "line": "206",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "CLEAR_REG",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@9444@macro@WRITE_REG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "WRITE_REG",
-    "location": {
-      "column": "9",
-      "line": "208",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "WRITE_REG",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@9493@macro@READ_REG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "READ_REG",
-    "location": {
-      "column": "9",
-      "line": "210",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "READ_REG",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:stm32l0xx.h@9534@macro@MODIFY_REG",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "MODIFY_REG",
-    "location": {
-      "column": "9",
-      "line": "212",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Drivers\\CMSIS\\Device\\ST\\STM32L0xx\\Include\\stm32l0xx.h"
-    },
-    "name": "MODIFY_REG",
-    "origin": "user_include",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32l0xx.c@1857@macro@HSE_VALUE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "HSE_VALUE",
-    "location": {
-      "column": "11",
-      "line": "51",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "HSE_VALUE",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32l0xx.c@2002@macro@MSI_VALUE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "MSI_VALUE",
-    "location": {
-      "column": "11",
-      "line": "55",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "MSI_VALUE",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32l0xx.c@2146@macro@HSI_VALUE",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "HSI_VALUE",
-    "location": {
-      "column": "11",
-      "line": "59",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "HSI_VALUE",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32l0xx.c@2662@macro@VECT_TAB_OFFSET",
-    "What": "MacroDef",
-    "defdec": "Def",
-    "display": "VECT_TAB_OFFSET",
-    "location": {
-      "column": "9",
-      "line": "83",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "VECT_TAB_OFFSET",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@SystemCoreClock",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "SystemCoreClock",
-    "location": {
-      "column": "12",
-      "line": "109",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "SystemCoreClock",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@AHBPrescTable",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "AHBPrescTable",
-    "location": {
-      "column": "17",
-      "line": "110",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "AHBPrescTable",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@APBPrescTable",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "APBPrescTable",
-    "location": {
-      "column": "17",
-      "line": "111",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "APBPrescTable",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@PLLMulTable",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "PLLMulTable",
-    "location": {
-      "column": "17",
-      "line": "112",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "PLLMulTable",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SystemInit",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SystemInit(void)",
-    "location": {
-      "column": "6",
-      "line": "135",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "SystemInit",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:@F@SystemCoreClockUpdate",
-    "What": "Function",
-    "defdec": "Def",
-    "display": "void SystemCoreClockUpdate(void)",
-    "location": {
-      "column": "6",
-      "line": "204",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "SystemCoreClockUpdate",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32l0xx.c@7005@F@SystemCoreClockUpdate@tmp",
-    "What": "Variable",
-    "defdec": "Def",
-    "display": "tmp",
-    "location": {
-      "column": "12",
-      "line": "206",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "tmp",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32l0xx.c@7005@F@SystemCoreClockUpdate@pllmul",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "pllmul",
-    "location": {
-      "column": "22",
-      "line": "206",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "pllmul",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32l0xx.c@7005@F@SystemCoreClockUpdate@plldiv",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "plldiv",
-    "location": {
-      "column": "35",
-      "line": "206",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "plldiv",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32l0xx.c@7005@F@SystemCoreClockUpdate@pllsource",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "pllsource",
-    "location": {
-      "column": "48",
-      "line": "206",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "pllsource",
-    "origin": "project_file",
-    "scope": null
-  },
-  {
-    "ID": "c:system_stm32l0xx.c@7005@F@SystemCoreClockUpdate@msirange",
-    "What": "Variable",
-    "defdec": "Dec",
-    "display": "msirange",
-    "location": {
-      "column": "64",
-      "line": "206",
-      "path": "C:\\Users\\\u0415\u0432\u0433\u0435\u043d\u0438\u0439\\Pyro\\Src\\system_stm32l0xx.c"
-    },
-    "name": "msirange",
-    "origin": "project_file",
     "scope": null
   },
   {
@@ -88788,7 +88788,7 @@
     "scope": null
   },
   {
-    "ID": "c:usart.cpp@2464@S@UartDriver@S@buffer@F@CxR#*c#@CxR",
+    "ID": "c:usart.cpp@2463@S@UartDriver@S@buffer@F@CxR#*c#@CxR",
     "What": "Variable",
     "defdec": "Def",
     "display": "CxR",
@@ -88802,7 +88802,7 @@
     "scope": null
   },
   {
-    "ID": "c:usart.cpp@2489@S@UartDriver@S@buffer@F@CxR#*c#@i",
+    "ID": "c:usart.cpp@2488@S@UartDriver@S@buffer@F@CxR#*c#@i",
     "What": "Variable",
     "defdec": "Def",
     "display": "i",

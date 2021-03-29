@@ -85,7 +85,7 @@ void UartDriver::Receive()
 
 void UartDriver::Delay(void)
 {
-  while (delay++ < 100) {}
+  while (delay++ < 80) {}
   delay = 0;
 }
 

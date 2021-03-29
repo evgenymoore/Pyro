@@ -8,7 +8,8 @@ void TIM6_IRQHandler(void)
   TIM6->SR = 0;
   
   Pyro.Read();
-  UART.Transmit((uint16_t)Pyro.data.adc);
+  //UART.Transmit((uint16_t)Pyro.data.adc);
+  SETBIT(GPIOB->ODR, LED_CTRL);
   if (Pyro.data.adc > 10000 || Pyro.data.adc < 4000)
     __NOP();
 }

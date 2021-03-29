@@ -1,12 +1,12 @@
 ###############################################################################
 #
-# IAR ELF Linker V8.32.3.193/W32 for ARM                  29/Mar/2021  11:25:36
+# IAR ELF Linker V8.32.3.193/W32 for ARM                  29/Mar/2021  13:38:58
 # Copyright 2007-2019 IAR Systems AB.
 #
 #    Output file  =  C:\Users\Евгений\Pyro\EWARM\Debug\Exe\project.out
 #    Map file     =  C:\Users\Евгений\Pyro\EWARM\Debug\List\project.map
 #    Command line =  
-#        -f C:\Users\B7E3~1\AppData\Local\Temp\EWC9A6.tmp
+#        -f C:\Users\B7E3~1\AppData\Local\Temp\EWE691.tmp
 #        (C:\Users\Евгений\Pyro\EWARM\Debug\Obj\gpio.o
 #        C:\Users\Евгений\Pyro\EWARM\Debug\Obj\main.o
 #        C:\Users\Евгений\Pyro\EWARM\Debug\Obj\pyro.o
@@ -303,8 +303,8 @@ Aldata                  0x2000'01c0    0x8  Data  Lc  heap0.o [2]
 CSTACK$$Base            0x2000'01d0          --   Gb  - Linker created -
 CSTACK$$Limit           0x2000'05d0          --   Gb  - Linker created -
 DMA1_Channel2_3_IRQHandler
-                         0x800'0e7d   0x3a  Code  Gb  stm32l0xx_it.o [1]
-EXTI4_15_IRQHandler      0x800'0eb7   0x20  Code  Gb  stm32l0xx_it.o [1]
+                         0x800'0e79   0x3a  Code  Gb  stm32l0xx_it.o [1]
+EXTI4_15_IRQHandler      0x800'0eb3   0x20  Code  Gb  stm32l0xx_it.o [1]
 GPIO_Init()              0x800'0745   0x64  Code  Gb  gpio.o [1]
 HEAP$$Base              0x2000'05d0          --   Gb  - Linker created -
 HEAP$$Limit             0x2000'07d0          --   Gb  - Linker created -
@@ -325,13 +325,13 @@ SystemClockSetting()     0x800'1063   0x6e  Code  Gb  main.o [1]
 SystemCoreClock         0x2000'0000    0x4  Data  Gb  system_stm32l0xx.o [1]
 SystemCoreClockUpdate    0x800'0431   0xca  Code  Gb  system_stm32l0xx.o [1]
 SystemInit               0x800'03e5   0x4c  Code  Gb  system_stm32l0xx.o [1]
-TIM6_IRQHandler          0x800'0e31   0x36  Code  Gb  stm32l0xx_it.o [1]
+TIM6_IRQHandler          0x800'0e31   0x32  Code  Gb  stm32l0xx_it.o [1]
 TIM6_Init(unsigned short, unsigned short)
                          0x800'0da5   0x4a  Code  Gb  tim.o [1]
 TIM_Enable(TIM_TypeDef *)
                          0x800'0e15    0xa  Code  Gb  tim.o [1]
 UART                    0x2000'01a4   0x10  Data  Gb  usart.o [1]
-USART1_IRQHandler        0x800'0e67   0x16  Code  Gb  stm32l0xx_it.o [1]
+USART1_IRQHandler        0x800'0e63   0x16  Code  Gb  stm32l0xx_it.o [1]
 UartDriver::Delay()      0x800'031d   0x16  Code  Gb  usart.o [1]
 UartDriver::Init()       0x800'0159   0xd0  Code  Gb  usart.o [1]
 UartDriver::Receive()    0x800'0287   0x26  Code  Gb  usart.o [1]
