@@ -11,9 +11,9 @@ union PyroData
   uint32_t input;
   struct
   {
-    uint32_t tem     : 14;
-    uint32_t adc     : 14;
-    //uint64_t config     : 25;
+    uint32_t status     :  1;
+    uint32_t adc        : 14;
+    uint64_t config     : 25;
   };
 };
 
