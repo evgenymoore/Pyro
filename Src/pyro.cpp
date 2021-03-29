@@ -25,7 +25,7 @@ void PyroDriver::Read()
   /* delay for 150 us */
   for (uint8_t i = 0; i < 150; i++) ;
   
-  for (uint8_t i = 0; i < 28; i++)      
+  for (uint8_t i = 0; i < 40; i++)      
   {
     /* create low to high transition */
     CLEARBIT(GPIOB->ODR, BK_DL);
