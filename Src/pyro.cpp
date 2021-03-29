@@ -1,17 +1,42 @@
 #include "pyro.hpp"
 
-PyroDriver Pyro(GPIOB, BK_DL);
+PyroDriver Pyro;
 
-PyroDriver::PyroDriver(GPIO_TypeDef* _port, uint16_t _pin)
+void PyroDriver::Write(uint32_t regval)
 {
-  dl_port = _port;
-  dl_pin = _pin;
+  uint16_t i;
+  uint32_t regmask = 0x1000000;
+  for (i = 0; i < 25; i++) 
+  {
+    SETBIT(GPIOB->ODR, BK_SI);
+    if (regval & regmask)
+      for (uint8_t j = 0; j < 150; j++) ;
+    CLEARBIT(GPIOB->ODR, BK_SI);
+    regmask >>= 1;
+  }
+  
+  for (i = 0; i < 600; i++) ;
 }
 
-inline void PyroDriver::Delay(uint32_t usec)
-{
-  //while(usec-- > 0) {}
-}
+//void PyroDriver::Write(uint32_t regval)
+//{
+//  uint16_t i;
+//  uint32_t nextbit;
+//  uint32_t regmask = 0x1000000;
+//  for (i = 0; i < 25; i++) 
+//  {
+//    nextbit = (regval & regmask) != 0;
+//    regmask >>= 1;
+//    CLEARBIT(GPIOB->ODR, BK_SI);
+//    SETBIT(GPIOB->ODR, BK_SI);
+//    GPIOB->ODR |= ((uint8_t)nextbit) << 5;
+//    for (i = 0; i < 150; i++) ;
+//  }
+//  
+//  CLEARBIT(GPIOB->ODR, BK_SI);
+//  for (i = 0; i < 600; i++) ;
+//}
+
 
 void PyroDriver::Read()
 {
@@ -20,10 +45,10 @@ void PyroDriver::Read()
   /* Set DL = High, to force fast uC controlled DL read out */
   SETBIT(GPIOB->MODER, GPIO_MODER_MODE8_0);
   SETBIT(GPIOB->ODR, BK_DL);
-  while (!(dl_port->ODR & dl_pin)) {}
+  while (!(GPIOB->ODR & BK_DL)) {}
   
   /* delay for 150 us */
-  for (uint8_t i = 0; i < 150; i++) ;
+  for (uint8_t i = 0; i < 250; i++) ;
   
   for (uint8_t i = 0; i < 40; i++)      
   {
@@ -41,7 +66,7 @@ void PyroDriver::Read()
     data.input <<= 1;
     
     /* if DL High set masked bit in PIRVal */
-    if (dl_port->IDR & dl_pin) data.input++;
+    if (GPIOB->IDR & BK_DL) data.input++;
   }
   
   SETBIT(GPIOB->MODER, GPIO_MODER_MODE8_0);

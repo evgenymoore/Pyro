@@ -8,9 +8,9 @@ int main(void)
   SystemCoreClockUpdate();
   
   GPIO_Init();
-  
   UART.Init();
-  //UART.Receive();
+  
+  Pyro.Write(0x0000011);
   
   TIM6_Init((uint16_t)(SystemCoreClock / 1000), 15);
   TIM_Enable(TIM6); 

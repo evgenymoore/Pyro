@@ -8,11 +8,11 @@
 
 union PyroData
 {
-  uint32_t input;
+  uint64_t input;
   struct
   {
-    uint32_t status     :  1;
-    uint32_t adc        : 14;
+    uint64_t status     :  1;
+    uint64_t adc        : 14;
     uint64_t config     : 25;
   };
 };
@@ -22,12 +22,8 @@ class PyroDriver
 public:
   PyroData data;
   
-  PyroDriver(GPIO_TypeDef* _port, uint16_t _pin);
+  void Write(uint32_t regval);
   void Read();
-  void Delay(uint32_t usec);
-private:
-  GPIO_TypeDef* dl_port;
-  uint16_t dl_pin;
 };
 
 extern PyroDriver Pyro;

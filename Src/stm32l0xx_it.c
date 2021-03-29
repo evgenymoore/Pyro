@@ -1,16 +1,19 @@
 #include "main.h"
 #include "stm32l0xx_it.h"
 
-FILE* log = fopen("E:\\log.txt", "w");
-
 void TIM6_IRQHandler(void)
 {
   TIM6->SR = 0;
   
+  SWITCHBIT(GPIOB->ODR, LED_CTRL);
+
   Pyro.Read();
   UART.Transmit((uint16_t)Pyro.data.adc);
+  
   if (Pyro.data.adc > 10000 || Pyro.data.adc < 4000)
     __NOP();
+  
+  Pyro.Write(0x0000011);
 }
 
 void USART1_IRQHandler(void)
@@ -28,17 +31,9 @@ void DMA1_Channel2_3_IRQHandler(void)
     DMA1->IFCR |= (0xFF << 8); 
     if (UART.Rx.buffer[0] == HEADER)
     {
-      //UART.Tx.FormMessage(UART.Rx.buffer);
       UART.Transmit((uint16_t)Pyro.data.adc);
       UART.Rx.buffer[0] = 0x00;
     }
     UART.Receive();
   }
-}
-
-void EXTI4_15_IRQHandler(void)
-{
-  EXTI->PR |= EXTI_PR_PR8;
-  CLEARBIT(EXTI->IMR, EXTI_IMR_IM8);
-  Pyro.Read();
 }
