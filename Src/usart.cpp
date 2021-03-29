@@ -55,8 +55,12 @@ void UartDriver::Init()
   USART1->CR1 |= USART_CR1_TE | USART_CR1_RE | USART_CR1_UE;
 }
 
-void UartDriver::Transmit(void)
+void UartDriver::Transmit(uint16_t data)
 {
+  Tx.buffer[0] = HEADER;
+  Tx.buffer[1] = (uint8_t)(data >> 8);
+  Tx.buffer[2] = (uint8_t)(data);
+  
   GPIOA->BSRR |= RE_DE;
   USART1->ICR |= USART_ICR_TCCF;
   if (!(USART1->ISR & USART_ISR_TC)) 
@@ -81,17 +85,10 @@ void UartDriver::Receive()
 
 void UartDriver::Delay(void)
 {
-  while (delay++ < 1000) {}
+  while (delay++ < 100) {}
   delay = 0;
 }
 
-void UartDriver::buffer::FormMessage(uint8_t* buffer)
-{
-  buffer::buffer[0] = HEADER;
-  (buffer[1] != 0x0) ? (buffer::buffer[1] = buffer[1]) : 
-                       (buffer::buffer[1] = 0xFF);
-  buffer::buffer[4] = CxR(buffer);                    
-}
 
 uint8_t UartDriver::buffer::CxR(uint8_t* buffer)
 {
