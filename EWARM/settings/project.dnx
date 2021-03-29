@@ -88,7 +88,8 @@
         <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Src\usart.c}.43.1" 0 0 1 "" 0 "" 0</Bp0>
         <Bp1>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Src\usart.c}.43.1" 0 0 1 "" 0 "" 0</Bp1>
         <Bp2>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\Src\usart.c}.39.3" 0 0 1 "" 0 "" 0</Bp2>
-        <Count>3</Count>
+        <Bp3>_ 1 "EMUL_CODE" "{$PROJ_DIR$\..\Src\stm32l0xx_it.c}.13.5" 0 0 1 "" 0 "" 0</Bp3>
+        <Count>4</Count>
     </Breakpoints2>
     <Aliases>
         <Count>0</Count>
