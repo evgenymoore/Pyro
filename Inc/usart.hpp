@@ -18,14 +18,13 @@ class UartDriver
       uint8_t buffer[size];
       uint8_t index;
       
-      void FormMessage(uint8_t* buffer);
       uint8_t CxR(uint8_t* buffer);
     };
     buffer Rx, Tx;
-   
+    
     UartDriver();
     void Init();
-    void Transmit();
+    void Transmit(uint16_t data);
     void Receive();
 };
 

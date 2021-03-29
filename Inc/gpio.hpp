@@ -9,15 +9,15 @@
 #define RE_DE                   ((uint16_t)0x0800)
 
     /* GPIO port B pin configuration */
-#define LED_DEB                 ((uint16_t)0x0002)
-#define DEBUG                   ((uint16_t)0x0004)
-#define LED_CTRL                ((uint16_t)0x0010)
-#define BK_DL                   ((uint16_t)0x0020)
-#define BK_SI                   ((uint16_t)0x0100)
+#define LED_DEB                 ((uint16_t)0x0002)      //PB1
+#define DEBUG                   ((uint16_t)0x0004)      //PB2
+#define LED_CTRL                ((uint16_t)0x0010)      //PB4
+#define BK_SI                   ((uint16_t)0x0020)      //PB5
+#define BK_DL                   ((uint16_t)0x0100)      //PB8
 
-#define setpin(port, pin)       port |=  pin;
-#define clearpin(port, pin)     port &= ~pin;     
-#define switchpin(port, pin)    port ^=  pin;
+#define SETBIT(PORT, BIT)       PORT |=  BIT;
+#define CLEARBIT(PORT, BIT)     PORT &= ~BIT;     
+#define SWITCHBIT(PORT, BIT)    PORT ^=  BIT;
 
 void GPIO_Init(void);
 

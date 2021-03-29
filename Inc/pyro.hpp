@@ -3,33 +3,31 @@
 
 #include <stdint.h>
 #include "stm32l071xx.h"
+
 #include "gpio.hpp"
 
-#define PIN_IS_INP      0
-#define PIN_IS_OUT      1
-#define DLA_OUT         (GPIOB->MODER &= 0xFFFFF7FF)
-#define DLA_IN          (GPIOB->MODER &= 0xFFFFF3FF)
-
-int                     PIRval  = 0;
-unsigned long           statcfg = 0;
-
-void readpyro(void);
-
+union PyroData
+{
+  uint32_t input;
+  struct
+  {
+    uint32_t tem     : 14;
+    uint32_t adc     : 14;
+    //uint64_t config     : 25;
+  };
+};
 
 class PyroDriver
 {
 public:
-  uint32_t data;
-  PyroDriver(GPIO_TypeDef* _port, uint16_t _pin);
+  PyroData data;
   
+  PyroDriver(GPIO_TypeDef* _port, uint16_t _pin);
   void Read();
-  void Delay();
+  void Delay(uint32_t usec);
 private:
   GPIO_TypeDef* dl_port;
   uint16_t dl_pin;
- 
-  void Clock();
-  void End();
 };
 
 extern PyroDriver Pyro;

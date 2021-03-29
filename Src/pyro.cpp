@@ -1,6 +1,6 @@
 #include "pyro.hpp"
 
-PyroDriver Pyro(GPIOB, BK_SI);
+PyroDriver Pyro(GPIOB, BK_DL);
 
 PyroDriver::PyroDriver(GPIO_TypeDef* _port, uint16_t _pin)
 {
@@ -8,52 +8,45 @@ PyroDriver::PyroDriver(GPIO_TypeDef* _port, uint16_t _pin)
   dl_pin = _pin;
 }
 
-void PyroDriver::Delay()
+inline void PyroDriver::Delay(uint32_t usec)
 {
-  /* 100 miliseconds of delay */
-  uint16_t delay = 0;
-  while (delay++ < (SystemCoreClock / 1000)) {}
-  
-}
-
-inline void PyroDriver::Clock()
-{
-  clearpin(dl_port->ODR, dl_pin);               
-  setpin(dl_port->MODER, GPIO_MODER_MODE8_0);  
-  clearpin(dl_port->ODR, dl_pin);
-
-  setpin(dl_port->ODR, dl_pin);
-  
-  clearpin(dl_port->MODER, GPIO_MODER_MODE8_0);  
-}
-
-inline void PyroDriver::End()
-{
-  clearpin(dl_port->ODR, dl_pin);
-  setpin(dl_port->MODER, GPIO_MODER_MODE8_0);  
-
-  for (uint8_t j = 0; j < 4; j++) ;
-  clearpin(dl_port->MODER, GPIO_MODER_MODE8_0);
+  //while(usec-- > 0) {}
 }
 
 void PyroDriver::Read()
 {
-  NVIC_DisableIRQ(EXTI4_15_IRQn);
-  data = 0;
+  data.input = 0;
   
-  while (!(dl_port->IDR & dl_pin)) {}
-  for (uint8_t i = 0; i < 240; i++) ;
-  for (uint8_t i = 0; i < 40; i++)      //40 - number of bits
+  /* Set DL = High, to force fast uC controlled DL read out */
+  SETBIT(GPIOB->MODER, GPIO_MODER_MODE8_0);
+  SETBIT(GPIOB->ODR, BK_DL);
+  while (!(dl_port->ODR & dl_pin)) {}
+  
+  /* delay for 150 us */
+  for (uint8_t i = 0; i < 150; i++) ;
+  
+  for (uint8_t i = 0; i < 28; i++)      
   {
-    Clock();
+    /* create low to high transition */
+    CLEARBIT(GPIOB->ODR, BK_DL);
+    SETBIT(GPIOB->MODER, GPIO_MODER_MODE8_0);
+    CLEARBIT(GPIOB->ODR, BK_DL);
+    asm ("nop");
+    SETBIT(GPIOB->ODR, BK_DL);
+    asm ("nop");
+    CLEARBIT(GPIOB->MODER, GPIO_MODER_MODE8);
+    /* wait for stable low signal */
     for (uint8_t j = 0; j < 4; j++) ;
-    data <<= 0x1;
-    if (dl_port->IDR & dl_pin) 
-      data++;
+    
+    data.input <<= 1;
+    
+    /* if DL High set masked bit in PIRVal */
+    if (dl_port->IDR & dl_pin) data.input++;
   }
   
-  End();
-  
-  NVIC_EnableIRQ(EXTI4_15_IRQn);
-  setpin(EXTI->IMR, EXTI_IMR_IM8);
+  SETBIT(GPIOB->MODER, GPIO_MODER_MODE8_0);
+  /* create low to high transition */ 
+  CLEARBIT(GPIOB->ODR, BK_DL);
+  for (uint8_t i = 0; i < 5; i++) ;
 }
+

@@ -10,12 +10,14 @@ int main(void)
   GPIO_Init();
   
   UART.Init();
-  UART.Receive();
+  //UART.Receive();
   
-  TIM6_Init((uint16_t)(SystemCoreClock / 1000), 1000);
+  TIM6_Init((uint16_t)(SystemCoreClock / 1000), 15);
   TIM_Enable(TIM6); 
-  
-  while (1) {}
+ 
+  while (1) {
+    UART.Transmit((uint16_t)Pyro.data.adc);
+  }
 }
 
 void SystemClockSetting(void)
@@ -41,10 +43,6 @@ void SystemClockSetting(void)
   /* HSE clock enable bit */
   RCC->CR |= RCC_CR_HSEON;
   while(!(RCC->CR & RCC_CR_HSERDY)) {}
-  
-  FLASH->ACR &= ~FLASH_ACR_PRFTEN;
-  FLASH->ACR |= FLASH_ACR_PRFTEN;
-  FLASH->ACR |= FLASH_ACR_LATENCY;
   
   /* system clock switch - HSE oscillator used as system clock*/
   RCC->CFGR |= RCC_CFGR_SW_HSE;
