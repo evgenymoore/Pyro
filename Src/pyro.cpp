@@ -5,38 +5,22 @@ PyroDriver Pyro;
 void PyroDriver::Write(uint32_t regval)
 {
   uint16_t i;
-  uint32_t regmask = 0x1000000;
+  uint32_t mask = 0x1000000;
   for (i = 0; i < 25; i++) 
   {
     SETBIT(GPIOB->ODR, BK_SI);
-    if (regval & regmask)
-      for (uint8_t j = 0; j < 150; j++) ;
+    if (!(regval & mask)) 
+      {CLEARBIT(GPIOB->ODR, BK_SI);}
+    /* delay for 72 us */
+    for (uint8_t j = 0; j < 100; j++) ;
     CLEARBIT(GPIOB->ODR, BK_SI);
-    regmask >>= 1;
+    mask >>= 1;
   }
   
-  for (i = 0; i < 600; i++) ;
+  CLEARBIT(GPIOB->ODR, BK_SI);
+  /* interrupt after data transmition for > 580 us */
+  for (i = 0; i < 800; i++) ;
 }
-
-//void PyroDriver::Write(uint32_t regval)
-//{
-//  uint16_t i;
-//  uint32_t nextbit;
-//  uint32_t regmask = 0x1000000;
-//  for (i = 0; i < 25; i++) 
-//  {
-//    nextbit = (regval & regmask) != 0;
-//    regmask >>= 1;
-//    CLEARBIT(GPIOB->ODR, BK_SI);
-//    SETBIT(GPIOB->ODR, BK_SI);
-//    GPIOB->ODR |= ((uint8_t)nextbit) << 5;
-//    for (i = 0; i < 150; i++) ;
-//  }
-//  
-//  CLEARBIT(GPIOB->ODR, BK_SI);
-//  for (i = 0; i < 600; i++) ;
-//}
-
 
 void PyroDriver::Read()
 {
@@ -74,4 +58,3 @@ void PyroDriver::Read()
   CLEARBIT(GPIOB->ODR, BK_DL);
   for (uint8_t i = 0; i < 5; i++) ;
 }
-

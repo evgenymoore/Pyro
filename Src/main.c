@@ -10,13 +10,12 @@ int main(void)
   GPIO_Init();
   UART.Init();
   
-  Pyro.Write(0x0000011);
-  
   TIM6_Init((uint16_t)(SystemCoreClock / 1000), 15);
   TIM_Enable(TIM6); 
  
   while (1) {
-    UART.Transmit((uint16_t)Pyro.data.adc);
+    Pyro.Write(0x01FE0111);
+    //UART.Transmit((uint16_t)Pyro.data.adc);
   }
 }
 
