@@ -19,6 +19,8 @@
 #define CLEARBIT(PORT, BIT)     PORT &= ~BIT;     
 #define SWITCHBIT(PORT, BIT)    PORT ^=  BIT;
 
+#define CLEARREG(REG)           REG   =  0;
+
 void GPIO_Init(void);
 
 #endif

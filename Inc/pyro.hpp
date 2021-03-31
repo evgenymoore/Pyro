@@ -6,22 +6,25 @@
 
 #include "gpio.hpp"
 
-union PyroData
+/*DIRECT LINK Description*/
+union DirectLink
 {
   uint64_t input;
   struct
   {
-    uint64_t status     :  1;
-    uint64_t adc        : 14;
-    uint64_t config     : 25;
+    uint64_t CFGR       : 25;   //Configuration register
+    uint64_t DR         : 14;   //Data register
+    uint64_t SR         :  1;   //Status register
   };
 };
 
 class PyroDriver
 {
 public:
-  PyroData data;
+  DirectLink    DIR;
+  uint32_t      SERIAL;
   
+  PyroDriver();
   void Write(uint32_t regval);
   void Read();
 };
