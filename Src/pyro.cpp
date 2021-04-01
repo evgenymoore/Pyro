@@ -4,6 +4,19 @@ PyroDriver Pyro;
 
 PyroDriver::PyroDriver() {}
 
+void PyroDriver::Reset()
+{
+  if (GPIOB->IDR & BK_DL)
+  {
+    /* output mode */
+    GPIOB->MODER = (GPIOB->MODER & ~GPIO_MODER_MODE8) | GPIO_MODER_MODE8_0;
+    GPIOB->ODR &= ~BK_DL;
+    /* delay for t > 35 us */
+    for (uint8_t i = 0; i < 70; i++) ;
+    /* input mode */
+    GPIOB->MODER &= ~GPIO_MODER_MODE8;
+  }
+}
 void PyroDriver::Write(uint32_t regval)
 {
   uint16_t i;

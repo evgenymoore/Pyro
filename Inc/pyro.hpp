@@ -6,6 +6,10 @@
 
 #include "gpio.hpp"
 
+/*SERIN Configuration register - 25 bit*/
+#define FORCE           0x00000030
+#define WAKEUP          0x00402F10
+
 /*DIRECT LINK Description*/
 union DirectLink
 {
@@ -22,11 +26,12 @@ class PyroDriver
 {
 public:
   DirectLink    DIR;
-  uint32_t      SERIAL;
+  uint32_t      SERIN;
   
   PyroDriver();
   void Write(uint32_t regval);
   void Read();
+  void Reset();
 };
 
 extern PyroDriver Pyro;

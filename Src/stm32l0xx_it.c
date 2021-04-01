@@ -1,12 +1,25 @@
 #include "main.h"
 #include "stm32l0xx_it.h"
 
+bool flag = 0;
+
 void TIM6_IRQHandler(void)
 {
   CLEARREG(TIM6->SR);
   
-  Pyro.Read();
-  Pyro.Write(Pyro.SERIAL);
+  //Pyro.Read();
+  
+  //Pyro.SERIN = 0x00000030;     //PIR(LPF) is selected
+  //Pyro.Write(Pyro.SERIN);
+}
+
+void EXTI4_15_IRQHandler(void)
+{
+  /* reset the interrupt */
+  EXTI->PR |= EXTI_PR_PR8;
+  
+  flag = !flag;
+  Pyro.Reset();
 }
 
 void USART1_IRQHandler(void)
