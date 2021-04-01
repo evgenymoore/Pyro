@@ -11,18 +11,14 @@ int main(void)
   UART.Init();
   
   Pyro.Reset();
-  Pyro.SERIN = WAKEUP;     
+  Pyro.SERIN = FORCE;     
   Pyro.Write(Pyro.SERIN);
   
   TIM6_Init((uint16_t)(SystemCoreClock / 1000), 12);
   TIM_Enable(TIM6); 
  
   while (1) {
-//    UART.Transmit((uint16_t)Pyro.DIR.DR);
-//    if (GPIOB->IDR & BK_DL)
-//    {
-//      Pyro.Reset();
-//    }
+    UART.Transmit((uint16_t)Pyro.DIR.DR);
   }
 }
 
