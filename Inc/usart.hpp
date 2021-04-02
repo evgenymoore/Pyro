@@ -10,7 +10,7 @@ class UartDriver
 {
   private:
     uint16_t delay;
-    static const uint8_t size = 5;
+    static const uint8_t size = 3;
     void Delay();
   public:
     struct buffer
