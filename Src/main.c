@@ -16,7 +16,7 @@ int main(void)
   TIM_Enable(TIM6); 
  
   while (1) {
-    UART.Transmit((uint16_t)Pyro.data.adc);
+    
   }
 }
 

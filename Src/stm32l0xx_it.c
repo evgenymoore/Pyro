@@ -6,7 +6,7 @@ void TIM6_IRQHandler(void)
   TIM6->SR = 0;
   
   Pyro.Read();
-  
+  UART.Transmit((uint16_t)Pyro.data.adc);
   SETBIT(GPIOB->ODR, LED_CTRL);
 }
 
