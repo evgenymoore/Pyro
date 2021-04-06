@@ -8,6 +8,10 @@
 #include "usart.hpp"
 #include "pyro.hpp"
 
+#define DEVICE          1588U
+#define PROJECT         0x9
+#define STOP            0xE5
+
 void Error_Handler(void);
 
 #endif  /* __MAIN_H */

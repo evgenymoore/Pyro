@@ -14,12 +14,11 @@ int main(void)
   Pyro.SERIN = FORCE;     
   Pyro.Write(Pyro.SERIN);
   
+  UART.Receive();
+  
   TIM6_Init((uint16_t)(SystemCoreClock / 1000), 12);
-  TIM_Enable(TIM6); 
  
-  while (1) {
-    
-  }
+  while (1) {}
 }
 
 void SystemClockSetting(void)

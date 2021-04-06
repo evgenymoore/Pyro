@@ -23,11 +23,13 @@ void DMA1_Channel2_3_IRQHandler(void)
   {
     /* clear the status register */
     DMA1->IFCR |= (0xFF << 8); 
-    if (UART.Rx.buffer[0] == HEADER)
+    if (UART.Rx.CxR() == 0xEC)
     {
-      UART.Transmit((uint16_t)Pyro.DIR.DR);
       UART.Rx.buffer[0] = 0x00;
+      UART.Transmit(DEVICE);
+      TIM_Enable(TIM6); 
     }
-    UART.Receive();
+    else 
+      UART.Receive();
   }
 }
