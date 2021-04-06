@@ -8,8 +8,6 @@
 #include "usart.hpp"
 #include "pyro.hpp"
 
-extern FILE *log;
-
 void Error_Handler(void);
 
 #endif  /* __MAIN_H */

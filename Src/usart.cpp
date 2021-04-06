@@ -68,9 +68,9 @@ void UartDriver::Transmit(uint16_t data)
     while (Tx.index < sizeof(Tx.buffer)) 
     {
       USART1->TDR = Tx.buffer[Tx.index++];
-      USART1->ICR |= USART_ICR_TCCF;
       Delay();
     }
+    USART1->ICR |= USART_ICR_TCCF;
     Tx.index = 0;
   }  
 }
@@ -85,7 +85,7 @@ void UartDriver::Receive()
 
 void UartDriver::Delay(void)
 {
-  while (delay++ < 80) {}
+  while (delay++ < 1000) {}
   delay = 0;
 }
 

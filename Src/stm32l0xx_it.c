@@ -1,13 +1,12 @@
 #include "main.h"
 #include "stm32l0xx_it.h"
 
-bool flag = 0;
-
 void TIM6_IRQHandler(void)
 {
   CLEARREG(TIM6->SR);
   
   Pyro.Read();
+  UART.Transmit((uint16_t)Pyro.DIR.DR);
 }
 
 void USART1_IRQHandler(void)
