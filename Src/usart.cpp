@@ -90,7 +90,7 @@ void UartDriver::Delay(void)
 }
 
 
-uint8_t UartDriver::buffer::CxR(uint8_t* buffer)
+uint8_t UartDriver::buffer::CxR()
 {
   uint8_t CxR = 0;
   for (uint8_t i = 1; i < sizeof(buffer); i++)

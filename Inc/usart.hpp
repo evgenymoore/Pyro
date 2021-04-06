@@ -18,7 +18,7 @@ class UartDriver
       uint8_t buffer[size];
       uint8_t index;
       
-      uint8_t CxR(uint8_t* buffer);
+      uint8_t CxR();
     };
     buffer Rx, Tx;
     

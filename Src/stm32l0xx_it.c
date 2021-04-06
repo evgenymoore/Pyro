@@ -23,19 +23,15 @@ void DMA1_Channel2_3_IRQHandler(void)
   {
     /* clear the status register */
     DMA1->IFCR |= (0xFF << 8); 
-    if (UART.Rx.buffer[0] == HEADER)
+    if (UART.Rx.CxR() == 0xEC)
     {
-      //UART.Tx.FormMessage(UART.Rx.buffer);
-      UART.Transmit((uint16_t)Pyro.data.adc);
       UART.Rx.buffer[0] = 0x00;
+      UART.Transmit(DEVICE);
+      TIM_Enable(TIM6); 
     }
-    UART.Receive();
+    else
+      UART.Receive();
   }
 }
 
-void EXTI4_15_IRQHandler(void)
-{
-  //EXTI->PR |= EXTI_PR_PR8;
-  //CLEARBIT(EXTI->IMR, EXTI_IMR_IM8);
-  //Pyro.Read();
-}
+void EXTI4_15_IRQHandler(void) {}

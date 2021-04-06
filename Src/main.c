@@ -10,10 +10,9 @@ int main(void)
   GPIO_Init();
   
   UART.Init();
-  //UART.Receive();
+  UART.Receive();
   
   TIM6_Init((uint16_t)(SystemCoreClock / 1000), 15);
-  TIM_Enable(TIM6); 
  
   while (1) {
     

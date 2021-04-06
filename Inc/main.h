@@ -8,7 +8,9 @@
 #include "usart.hpp"
 #include "pyro.hpp"
 
-extern FILE *log;
+#define DEVICE          1798U
+#define PROJECT         0x9
+#define STOP            0xE5
 
 void Error_Handler(void);
 
