@@ -5,8 +5,14 @@ void TIM6_IRQHandler(void)
 {
   CLEARREG(TIM6->SR);
   
+  SETBIT(GPIOB->ODR, LED_CTRL);
   Pyro.Read();
   UART.Transmit((uint16_t)Pyro.DIR.DR);
+}
+
+void TIM7_IRQHandler(void)
+{
+  CLEARREG(TIM7->SR);
 }
 
 void USART1_IRQHandler(void)

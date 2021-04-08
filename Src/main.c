@@ -14,11 +14,17 @@ int main(void)
   Pyro.SERIN = FORCE;     
   Pyro.Write(Pyro.SERIN);
   
+  TIM6_Init((uint16_t)(SystemCoreClock / 1000), 12);  
   UART.Receive();
+    
+  SETBIT(SPI_PORT, CS);
+  SETBIT(SPI_PORT, SCLK);
+  /* DEVICE CHECK */
+  Axel.Receive(DEVID);
   
-  TIM6_Init((uint16_t)(SystemCoreClock / 1000), 12);
- 
-  while (1) {}
+  while (1) {
+     
+  }
 }
 
 void SystemClockSetting(void)

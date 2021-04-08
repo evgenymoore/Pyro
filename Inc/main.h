@@ -4,9 +4,10 @@
 #include <stdio.h>
 
 #include "tim.h"
+#include "pyro.hpp"
+#include "axel.hpp"
 #include "gpio.hpp"
 #include "usart.hpp"
-#include "pyro.hpp"
 
 #define DEVICE          1588U
 #define PROJECT         0x9
