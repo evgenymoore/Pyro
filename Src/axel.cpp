@@ -7,7 +7,6 @@ AxelDriver::AxelDriver() {}
 void AxelDriver::Transmit(uint8_t address, uint8_t data) 
 {
   CLEARBIT(SPI_PORT, CS);    
-  
   /* WRITE mode */
   CLEARBIT(SPI_PORT, SDI);
 
@@ -22,22 +21,9 @@ void AxelDriver::Transmit(uint8_t address, uint8_t data)
   }
   
   /* send the address byte */
-  for (int8_t shift = 7; shift >= 0; shift--)
+  for (int8_t shift = 5; shift >= 0; shift--)
   {
     (address >> shift) & 0x01 ? (SPI_PORT |= SDI) : (SPI_PORT &= ~SDI);
-    
-    /* SCLK = 0 */
-    CLEARBIT(SPI_PORT, SCLK);
-    Delay(125);
-    /* SCLK = 1 */
-    SETBIT(SPI_PORT, SCLK);
-    Delay(125);
-  }
-  /* send the data byte */
-  for (int8_t shift = 7; shift >= 0; shift--)
-  {
-    (data >> shift) & 0x01 ? (SPI_PORT |= SDI) : (SPI_PORT &= ~SDI);
-    
     /* SCLK = 0 */
     CLEARBIT(SPI_PORT, SCLK);
     Delay(125);
@@ -46,17 +32,29 @@ void AxelDriver::Transmit(uint8_t address, uint8_t data)
     Delay(125);
   }
   
+  /* send the data byte */
+  for (int8_t shift = 7; shift >= 0; shift--)
+  {
+    /* SCLK = 0 */
+    CLEARBIT(SPI_PORT, SCLK);
+    Delay(125);
+    (data >> shift) & 0x01 ? (SPI_PORT |= SDI) : (SPI_PORT &= ~SDI);
+    /* SCLK = 1 */
+    SETBIT(SPI_PORT, SCLK);
+    Delay(125);
+  }
   SETBIT(SPI_PORT, CS);
 }
 
 void AxelDriver::Receive(uint8_t address) 
 {
-  CLEARBIT(SPI_PORT, CS);    
+  uint8_t i, size;
   
+  CLEARBIT(SPI_PORT, CS);    
   /* READ mode */
   SETBIT(SPI_PORT, SDI);
-
-  for (uint8_t i = 2; i > 0; i--) 
+  
+  for (i = 2; i > 0; i--) 
   {
     /* SCLK = 0 */
     CLEARBIT(SPI_PORT, SCLK);
@@ -80,10 +78,10 @@ void AxelDriver::Receive(uint8_t address)
   }
   
   /* receive the data byte */
-  for (uint8_t i = 0; i < 8; i++)
+  i = 0; size = 48;
+  for (i; i < size; i++)
   {
     data.input <<= 1;
-    
     /* SCLK = 0 */
     CLEARBIT(SPI_PORT, SCLK);
     Delay(125);
@@ -96,4 +94,4 @@ void AxelDriver::Receive(uint8_t address)
   SETBIT(SPI_PORT, CS);
 }
 
-inline void AxelDriver::Delay(uint16_t time) { for (time; time >0; time--) ; }
+inline void AxelDriver::Delay(uint16_t time) { for (time; time > 0; time--) ; }

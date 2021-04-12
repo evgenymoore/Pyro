@@ -89,7 +89,6 @@ void UartDriver::Delay(void)
   delay = 0;
 }
 
-
 uint8_t UartDriver::buffer::CxR()
 {
   uint8_t CxR = 0;

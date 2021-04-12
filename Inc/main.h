@@ -9,9 +9,9 @@
 #include "gpio.hpp"
 #include "usart.hpp"
 
-#define DEVICE          1588U
-#define PROJECT         0x9
-#define STOP            0xE5
+#define PYRO            1588U
+#define ID              0x9
+#define DEVICE          0xE5
 
 void Error_Handler(void);
 

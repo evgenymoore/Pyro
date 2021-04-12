@@ -2,6 +2,7 @@
 #define USART_HPP
 
 #include "gpio.hpp"
+#include "axel.hpp"
 #include "tim.h"
 
 #define HEADER          0xAA

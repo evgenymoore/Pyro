@@ -22,4 +22,14 @@ void GPIO_Init(void)
   GPIOA->MODER = (GPIOA->MODER & ~GPIO_MODER_MODE5);                            /* INT2 - input mode */
   GPIOA->MODER = (GPIOA->MODER & ~GPIO_MODER_MODE6);                            /* INT1 - input mode */
   GPIOA->MODER = (GPIOA->MODER & ~GPIO_MODER_MODE7) | GPIO_MODER_MODE7_0;       /* CS   - output mode */
+  
+  RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
+  SYSCFG->EXTICR[1] |= SYSCFG_EXTICR2_EXTI6_PB;
+  
+  /*EXTI SETTINGS*/
+  EXTI->IMR |= EXTI_IMR_IM6;
+  EXTI->RTSR |= EXTI_RTSR_TR6;
+  
+  NVIC_EnableIRQ(EXTI4_15_IRQn);
+  NVIC_SetPriority(EXTI4_15_IRQn, 1);
 }

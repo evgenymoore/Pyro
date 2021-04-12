@@ -6,18 +6,26 @@ void TIM6_IRQHandler(void)
   CLEARREG(TIM6->SR);
   
   SETBIT(GPIOB->ODR, LED_CTRL);
+  /* reading the data from direct link of PYD1588 */
   Pyro.Read();
+  /* transmission of pyro data*/
   UART.Transmit((uint16_t)Pyro.DIR.DR);
 }
 
 void TIM7_IRQHandler(void)
 {
   CLEARREG(TIM7->SR);
+  Axel.Receive(DATAX0);
+}
+
+void EXTI4_15_IRQHandler(void)
+{
+  EXTI->PR |= EXTI_PR_PR6;
 }
 
 void USART1_IRQHandler(void)
 {
-  /* UART error handler */
+  /* UART ERROR HANDLER */
   if (USART1->ISR & (USART_ISR_ORE | USART_ISR_FE | USART_ISR_NE))
     /* clear interrupt status register*/
     USART1->ICR = 0xFF;
@@ -31,8 +39,8 @@ void DMA1_Channel2_3_IRQHandler(void)
     DMA1->IFCR |= (0xFF << 8); 
     if (UART.Rx.CxR() == 0xEC)
     {
-      UART.Rx.buffer[0] = 0x00;
-      UART.Transmit(DEVICE);
+      /* send the pyro ID */
+      UART.Transmit(PYRO);
       TIM_Enable(TIM6); 
     }
     else 
