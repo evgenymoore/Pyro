@@ -27,7 +27,7 @@ class PyroDriver
 public:
   DirectLink    DIR;
   uint32_t      SERIN;
-  
+
   PyroDriver();
   void Write(uint32_t regval);
   void Read();

@@ -6,12 +6,11 @@ int main(void)
 {
   SystemClockSetting();
   SystemCoreClockUpdate();
-  
+
+  Pyro.SERIN = FORCE; 
   GPIO_Init();
-  UART.Init();
   
   Pyro.Reset();
-  Pyro.SERIN = FORCE;     
   Pyro.Write(Pyro.SERIN);
   
   SETBIT(SPI_PORT, CS);
@@ -21,7 +20,8 @@ int main(void)
   TIM7_Init((uint16_t)(SystemCoreClock / 8000), 100);
   TIM_Enable(TIM7);
 
-  TIM6_Init((uint16_t)(SystemCoreClock / 1000), 12);  
+  TIM6_Init((uint16_t)(SystemCoreClock / 1000), 12);
+  UART.Init();  
   UART.Receive();
   
   while (1) {}

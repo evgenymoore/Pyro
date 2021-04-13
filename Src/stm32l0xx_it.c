@@ -20,7 +20,12 @@ void TIM7_IRQHandler(void)
 
 void EXTI4_15_IRQHandler(void)
 {
-  EXTI->PR |= EXTI_PR_PR6;
+  EXTI->PR |= EXTI_PR_PR6 | EXTI_PR_PR8;
+  
+  /* alarm */
+  SWITCHBIT(GPIOB->ODR, LED_CTRL);
+  
+  Pyro.Reset();
 }
 
 void USART1_IRQHandler(void)
