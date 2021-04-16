@@ -7,7 +7,8 @@ int main(void)
   SystemClockSetting();
   SystemCoreClockUpdate();
 
-  Pyro.SERIN = FORCE; 
+  /* PYD MODE*/
+  Pyro.SERIN = FORCE_TEMP; 
   GPIO_Init();
   
   Pyro.Reset();
@@ -15,16 +16,20 @@ int main(void)
   
   SETBIT(SPI_PORT, CS);
   SETBIT(SPI_PORT, SCLK);
+  Axel.Write(THRESH_ACT, 0x20);
+  Axel.Write(ACT_INACT_CTL, 0x70);
+  Axel.Write(INT_ENABLE, 0x10);
+  Axel.Write(POWER_CTL, 0x08);
   
-  Axel.Transmit(POWER_CTL, 0x08);
   TIM7_Init((uint16_t)(SystemCoreClock / 8000), 100);
-  TIM_Enable(TIM7);
 
   TIM6_Init((uint16_t)(SystemCoreClock / 1000), 12);
   UART.Init();  
   UART.Receive();
   
-  while (1) {}
+  while (1) {
+    Axel.Read(INT_SOURCE);
+  }
 }
 
 void SystemClockSetting(void)

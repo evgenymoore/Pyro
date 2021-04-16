@@ -1,31 +1,47 @@
 #include "main.h"
 #include "stm32l0xx_it.h"
 
+uint8_t counter = 0;
+
 void TIM6_IRQHandler(void)
 {
   CLEARREG(TIM6->SR);
-  
+  /* transmission indication */
   SETBIT(GPIOB->ODR, LED_CTRL);
+  
   /* reading the data from direct link of PYD1588 */
   Pyro.Read();
-  /* transmission of pyro data*/
-  UART.Transmit((uint16_t)Pyro.DIR.DR);
+  /* average temperature value */
+  if (Pyro.SERIN == FORCE_TEMP && counter++ < 5) 
+  {
+    Pyro.TEMP += Pyro.DIR.DR;
+    if (counter == 5) 
+    {
+      Pyro.TEMP /= counter;
+      /* transmission of internal temperature*/
+      UART.Transmit((uint16_t)Pyro.TEMP);
+      Pyro.Reset();
+      /* switch to pyro data */
+      Pyro.SERIN = FORCE_PIR;
+      Pyro.Write(Pyro.SERIN);
+    }
+  }
+  else
+    /* transmission of pyro data*/
+    UART.Transmit((uint16_t)Pyro.DIR.DR);
 }
 
 void TIM7_IRQHandler(void)
 {
   CLEARREG(TIM7->SR);
-  Axel.Receive(DATAX0);
 }
 
 void EXTI4_15_IRQHandler(void)
 {
   EXTI->PR |= EXTI_PR_PR6 | EXTI_PR_PR8;
   
-  /* alarm */
-  SWITCHBIT(GPIOB->ODR, LED_CTRL);
-  
-  Pyro.Reset();
+  /* accelerometer alarm */
+  //SWITCHBIT(GPIOB->ODR, LED_DEB);
 }
 
 void USART1_IRQHandler(void)

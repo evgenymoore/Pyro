@@ -4,7 +4,7 @@ AxelDriver Axel;
 
 AxelDriver::AxelDriver() {}
 
-void AxelDriver::Transmit(uint8_t address, uint8_t data) 
+void AxelDriver::Write(uint8_t address, uint8_t data) 
 {
   CLEARBIT(SPI_PORT, CS);    
   /* WRITE mode */
@@ -46,7 +46,7 @@ void AxelDriver::Transmit(uint8_t address, uint8_t data)
   SETBIT(SPI_PORT, CS);
 }
 
-void AxelDriver::Receive(uint8_t address) 
+void AxelDriver::Read(uint8_t address) 
 {
   uint8_t i, size;
   
@@ -78,7 +78,7 @@ void AxelDriver::Receive(uint8_t address)
   }
   
   /* receive the data byte */
-  i = 0; size = 48;
+  i = 0; size = 8;
   for (i; i < size; i++)
   {
     data.input <<= 1;

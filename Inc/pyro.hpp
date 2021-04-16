@@ -7,8 +7,9 @@
 #include "gpio.hpp"
 
 /*SERIN Configuration register - 25 bit*/
-#define FORCE           0x00000030
-#define WAKEUP          0x00402F10
+#define FORCE_PIR               0x00000030      /* PIR (LPF) */
+#define FORCE_TEMP              0x00000070      /* TEMP_SENSOR */
+#define WAKEUP                  0x00402F10
 
 /*DIRECT LINK Description*/
 union DirectLink
@@ -27,6 +28,7 @@ class PyroDriver
 public:
   DirectLink    DIR;
   uint32_t      SERIN;
+  uint16_t      TEMP;
 
   PyroDriver();
   void Write(uint32_t regval);

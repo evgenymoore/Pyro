@@ -13,10 +13,10 @@ void GPIO_Init(void)
   /* PB5 - BK-SI - output mode */
   GPIOB->MODER = (GPIOB->MODER & ~GPIO_MODER_MODE5) | GPIO_MODER_MODE5_0; 
   
-  if (Pyro.SERIN == FORCE)
+  if (Pyro.SERIN != WAKEUP)
     /* PB8 - BK-DL - output mode */
     GPIOB->MODER = (GPIOB->MODER & ~GPIO_MODER_MODE8) | GPIO_MODER_MODE8_0;
-  else if (Pyro.SERIN == WAKEUP) {
+  else {
     /* PB8 - BK-DL - input mode */
     GPIOB->MODER = (GPIOB->MODER & ~GPIO_MODER_MODE8);
     
@@ -40,7 +40,7 @@ void GPIO_Init(void)
   GPIOA->MODER = (GPIOA->MODER & ~GPIO_MODER_MODE7) | GPIO_MODER_MODE7_0;       /* CS   - output mode */
   
   RCC->APB2ENR |= RCC_APB2ENR_SYSCFGEN;
-  SYSCFG->EXTICR[1] |= SYSCFG_EXTICR2_EXTI6_PB;
+  SYSCFG->EXTICR[1] |= SYSCFG_EXTICR2_EXTI6_PA;
   
   /*EXTI SETTINGS*/
   EXTI->IMR |= EXTI_IMR_IM6;

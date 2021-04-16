@@ -13,6 +13,7 @@
 #define LATENT                  0x22
 #define WINDOW                  0x23
 #define THRESH_ACT              0x24
+#define ACT_INACT_CTL           0x27
 #define TAP_AXES                0x2A
 #define POWER_CTL               0x2D
 #define INT_ENABLE              0x2E
@@ -28,13 +29,7 @@
 
 union AxelData
 {
-  uint64_t input; 
-  struct
-  {
-    uint64_t x          : 16;
-    uint64_t y          : 16;
-    uint64_t z          : 16;
-  };
+  uint8_t input; 
 };
 
 class AxelDriver
@@ -43,8 +38,8 @@ public:
   AxelData data;
   
   AxelDriver();
-  void Transmit(uint8_t address, uint8_t data);
-  void Receive(uint8_t address);
+  void Write(uint8_t address, uint8_t data);
+  void Read(uint8_t address);
   void Delay(uint16_t time);
 };
 
