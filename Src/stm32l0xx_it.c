@@ -1,12 +1,27 @@
 #include "main.h"
 #include "stm32l0xx_it.h"
 
+uint8_t counter = 0;
+
 void TIM6_IRQHandler(void)
 {
   TIM6->SR = 0;
   
   Pyro.Read();
-  UART.Transmit((uint16_t)Pyro.data.adc);
+  
+  if (counter < 6) {
+    if (counter != 0)
+      Pyro.TEMP += Pyro.data.tem;
+    counter++; 
+  }
+  else if (counter == 6) {
+    Pyro.TEMP /= 5;
+    UART.Transmit((uint16_t)Pyro.TEMP);
+    counter++;
+  }
+  else if (counter > 6)
+    UART.Transmit((uint16_t)Pyro.data.adc);
+  
   SETBIT(GPIOB->ODR, LED_CTRL);
 }
 

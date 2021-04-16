@@ -21,6 +21,7 @@ class PyroDriver
 {
 public:
   PyroData data;
+  uint16_t TEMP;
   
   PyroDriver(GPIO_TypeDef* _port, uint16_t _pin);
   void Read();
