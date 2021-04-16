@@ -8,6 +8,16 @@
 #define RXD                     ((uint16_t)0x0400)
 #define RE_DE                   ((uint16_t)0x0800)
 
+    /* SPI port & pin configurations */
+#define SCLK                    ((uint16_t)0x0004)      /* PA2 */ 
+#define SDI                     ((uint16_t)0x0008)      /* PA3 */       /* MOSI */
+#define SDO                     ((uint16_t)0x0010)      /* PA4 */       /* MISO */
+#define INT2                    ((uint16_t)0x0020)      /* PA5 */
+#define INT1                    ((uint16_t)0x0040)      /* PA6 */
+#define CS                      ((uint16_t)0x0080)      /* PA7 */
+
+#define SPI_PORT                GPIOA->ODR
+
     /* GPIO port B pin configuration */
 #define LED_DEB                 ((uint16_t)0x0002)      //PB1
 #define DEBUG                   ((uint16_t)0x0004)      //PB2
