@@ -55,11 +55,37 @@ void UartDriver::Init()
   USART1->CR1 |= USART_CR1_TE | USART_CR1_RE | USART_CR1_UE;
 }
 
-void UartDriver::Transmit(uint16_t data)
+void UartDriver::Transmit(uint32_t data)
 {
   Tx.buffer[0] = HEADER;
   Tx.buffer[1] = (uint8_t)(data >> 8);
   Tx.buffer[2] = (uint8_t)(data);
+  Tx.buffer[3] = 0;
+  Tx.buffer[4] = 0;
+  Tx.buffer[5] = UART.freq;
+  
+  GPIOA->BSRR |= RE_DE;
+  USART1->ICR |= USART_ICR_TCCF;
+  if (!(USART1->ISR & USART_ISR_TC)) 
+  {
+    while (Tx.index < sizeof(Tx.buffer)) 
+    {
+      USART1->TDR = Tx.buffer[Tx.index++];
+      Delay();
+    }
+    USART1->ICR |= USART_ICR_TCCF;
+    Tx.index = 0;
+  }  
+}
+
+void UartDriver::_Transmit(uint32_t data, uint32_t tem)
+{
+  Tx.buffer[0] = HEADER;
+  Tx.buffer[1] = (uint8_t)(data >> 8);
+  Tx.buffer[2] = (uint8_t)(data);
+  Tx.buffer[3] = (uint8_t)(tem >> 8);
+  Tx.buffer[4] = (uint8_t)(tem);
+  Tx.buffer[5] = UART.freq;
   
   GPIOA->BSRR |= RE_DE;
   USART1->ICR |= USART_ICR_TCCF;
@@ -89,11 +115,10 @@ void UartDriver::Delay(void)
   delay = 0;
 }
 
-
-uint8_t UartDriver::buffer::CxR()
+uint8_t UartDriver::rx_buff::CxR()
 {
   uint8_t CxR = 0;
-  for (uint8_t i = 1; i < sizeof(buffer); i++)
-    CxR ^= buffer[i];
+  for (uint8_t i = 1; i < sizeof(rx_buff::buffer); i++)
+    CxR ^= rx_buff::buffer[i];
   return CxR;
 }

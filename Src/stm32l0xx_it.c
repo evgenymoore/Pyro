@@ -16,11 +16,13 @@ void TIM6_IRQHandler(void)
   }
   else if (counter == 6) {
     Pyro.TEMP /= 5;
-    UART.Transmit((uint16_t)Pyro.TEMP);
+    UART.Transmit(Pyro.TEMP);
     counter++;
   }
   else if (counter > 6)
-    UART.Transmit((uint16_t)Pyro.data.adc);
+    UART._Transmit(Pyro.data.adc, Pyro.data.tem);
+  
+  (UART.freq != 66) ? (UART.freq++) : (UART.freq = 0);
   
   SETBIT(GPIOB->ODR, LED_CTRL);
 }
