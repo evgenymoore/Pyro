@@ -29,6 +29,9 @@ void TIM6_IRQHandler(void)
   else
     /* transmission of pyro data*/
     UART.Transmit((uint16_t)Pyro.DIR.DR);
+  
+  (UART.counter != 88) ? (UART.counter++) : (UART.counter = 0);
+  
 }
 
 void TIM7_IRQHandler(void)
