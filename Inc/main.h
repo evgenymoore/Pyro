@@ -11,6 +11,7 @@
 #define DEVICE          1798U
 #define PROJECT         0x9
 #define STOP            0xE5
+#define CXR             0x46
 
 void Error_Handler(void);
 

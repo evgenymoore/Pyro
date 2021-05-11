@@ -22,7 +22,7 @@ class UartDriver
     
     struct rx_buff
     {
-      static const uint8_t size = 3;
+      static const uint8_t size = 4;
       uint8_t buffer[size];
       uint8_t index;
       
@@ -30,12 +30,11 @@ class UartDriver
     };
     rx_buff Rx;
     
-    uint8_t freq;
+    uint8_t counter;
     
     UartDriver();
     void Init();
-    void Transmit(uint32_t data);
-    void _Transmit(uint32_t data, uint32_t tem);
+    void Transmit(uint32_t data, uint32_t tem);
     void Receive();
 };
 
