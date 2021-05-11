@@ -17,9 +17,9 @@ union DirectLink
   uint64_t input;
   struct
   {
-    uint64_t CFGR       : 25;   //Configuration register
-    uint64_t DR         : 14;   //Data register
-    uint64_t SR         :  1;   //Status register
+    uint64_t CFGR       : 25;   /* Configuration register */
+    uint64_t DR         : 14;   /* Data register */
+    uint64_t SR         :  1;   /* Status register */
   };
 };
 

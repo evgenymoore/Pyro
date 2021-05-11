@@ -61,7 +61,7 @@ void UartDriver::Transmit(uint16_t data)
   Tx.buffer[1] = (uint8_t)(data >> 8);
   Tx.buffer[2] = (uint8_t)(data);  
   Tx.buffer[3] = UartDriver::counter;
-
+  
   GPIOA->BSRR |= RE_DE;
   USART1->ICR |= USART_ICR_TCCF;
   if (!(USART1->ISR & USART_ISR_TC)) 
@@ -93,7 +93,7 @@ void UartDriver::Delay(void)
 uint8_t UartDriver::rx_buff::CxR()
 {
   uint8_t CxR = 0;
-  for (uint8_t i = 1; i < sizeof(rx_buff::buffer); i++)
+  for (uint8_t i = 0; i < (sizeof(rx_buff::buffer) - 1); i++)
     CxR ^= rx_buff::buffer[i];
   return CxR;
 }

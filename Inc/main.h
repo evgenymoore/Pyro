@@ -12,6 +12,7 @@
 #define PYRO            1588U
 #define ID              0x9
 #define DEVICE          0xE5
+#define CXR             0x46
 
 void Error_Handler(void);
 

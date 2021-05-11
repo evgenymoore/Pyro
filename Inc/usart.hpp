@@ -23,7 +23,7 @@ class UartDriver
     
     struct rx_buff
     {
-      static const uint8_t size = 3;
+      static const uint8_t size = 4;
       uint8_t buffer[size];
       uint8_t index;
       
