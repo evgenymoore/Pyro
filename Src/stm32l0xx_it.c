@@ -6,41 +6,43 @@ uint8_t counter = 0;
 void TIM6_IRQHandler(void)
 {
   CLEARREG(TIM6->SR);
+  
   /* transmission indication */
   SETBIT(GPIOB->ODR, LED_CTRL);
   
-  /* reading the data from direct link of PYD1588 */
-  Pyro.Read();
-  /* average temperature value */
-  if (Pyro.SERIN == FORCE_TEMP && counter <= 6) 
-  {
-    switch (counter)
-    {
-      case 0  : __NOP();
-            break;
-      case 6  : Pyro.TEMP /= 5;
-                /* transmission of internal temperature*/
-                UART.Transmit((uint16_t)Pyro.TEMP);
-                Pyro.Reset();
-                /* switch to pyro data */
-                Pyro.SERIN = FORCE_PIR;
-                Pyro.Write(Pyro.SERIN);
-            break; 
-      default : Pyro.TEMP += Pyro.DIR.DR;
-            break;
-    }
-    counter++;
-  }
-  else
-    /* transmission of pyro data*/
-    UART.Transmit((uint16_t)Pyro.DIR.DR);
-  
   (UART.counter != 88) ? (UART.counter++) : (UART.counter = 0);
+  
+  /* reading the data from direct link of PYD1588 */
+  if (Pyro.SERIN == FORCE_TEMP) 
+  {
+    Pyro.Reset();
+    /* switch to pyro data */
+    Pyro.SERIN = FORCE_PIR;
+    Pyro.Write(Pyro.SERIN);
+  }
+  Pyro.Read();  
+  UART.Transmit((uint16_t)Pyro.DIR.DR);
 }
 
 void TIM7_IRQHandler(void)
 {
   CLEARREG(TIM7->SR);
+  Pyro.Read();
+  /* average temperature value */
+  if (Pyro.SERIN == FORCE_TEMP && counter < 6)
+  {
+    switch (counter)
+    {
+      case 5  : Pyro.TEMP /= counter;
+                UART.Tx.buffer[3] = (uint8_t)(Pyro.TEMP >> 8);
+                UART.Tx.buffer[4] = (uint8_t)(Pyro.TEMP);
+                Pyro.TEMP = counter = 0;
+            break; 
+      default : Pyro.TEMP += Pyro.DIR.DR;
+                counter++;
+            break;
+    }
+  }
 }
 
 void EXTI4_15_IRQHandler(void)
@@ -69,6 +71,7 @@ void DMA1_Channel2_3_IRQHandler(void)
     {
       /* send the pyro ID */
       UART.Transmit(PYRO);
+      TIM_Disable(TIM7);
       TIM_Enable(TIM6); 
     }
     else 
