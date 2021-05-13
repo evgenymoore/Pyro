@@ -13,7 +13,9 @@ int main(void)
   UART.Receive();
   
   TIM6_Init((uint16_t)(SystemCoreClock / 1000), 15);
- 
+  TIM7_Init((uint16_t)(SystemCoreClock / 1000), 16);
+  TIM_Enable(TIM7);
+  
   while (1) {
     
   }

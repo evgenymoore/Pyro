@@ -18,6 +18,24 @@ void TIM6_Init(uint16_t prescaler, uint16_t preload)        /*!< TIM ACTIVATION 
   NVIC_EnableIRQ(TIM6_IRQn);
 }
 
+void TIM7_Init(uint16_t prescaler, uint16_t preload)        /*!< TIM ACTIVATION */
+{
+  RCC->APB1ENR |= RCC_APB1ENR_TIM7EN;
+  
+  TIM7->PSC |= prescaler - 1; 
+  
+  TIM7->ARR = preload - 1;     
+  
+  TIM7->EGR |= TIM_EGR_UG;
+  __NOP();  
+  TIM7->SR = 0;
+  
+  TIM7->DIER |= TIM_DIER_UIE;
+  
+  NVIC_SetPriority(TIM7_IRQn, 0); 
+  NVIC_EnableIRQ(TIM7_IRQn);
+}
+
 void TIM_Enable(TIM_TypeDef* tim)
 {
   tim->CR1 |= TIM_CR1_CEN;

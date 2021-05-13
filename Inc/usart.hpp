@@ -2,6 +2,7 @@
 #define USART_HPP
 
 #include "gpio.hpp"
+#include "pyro.hpp"
 #include "tim.h"
 
 #define HEADER          0xAA
@@ -14,9 +15,11 @@ class UartDriver
   public:
     struct tx_buff
     {
-      static const uint8_t size = 6;
+      static const uint8_t size = 7;
       uint8_t buffer[size];
       uint8_t index;
+      
+      uint8_t CxR();
     };
     tx_buff Tx;
     
@@ -34,7 +37,7 @@ class UartDriver
     
     UartDriver();
     void Init();
-    void Transmit(uint32_t data, uint32_t tem);
+    void Transmit(uint32_t data);
     void Receive();
 };
 

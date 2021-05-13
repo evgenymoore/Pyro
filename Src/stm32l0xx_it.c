@@ -7,28 +7,35 @@ void TIM6_IRQHandler(void)
 {
   TIM6->SR = 0;
   
+  (UART.counter != 66) ? (UART.counter++) : (UART.counter = 0);
+  
   Pyro.Read();
 
-  if (counter > 6) 
-    UART.Transmit(Pyro.data.adc, Pyro.data.tem);
-  else 
+  UART.Transmit(Pyro.data.adc);
+  
+  SWITCHBIT(GPIOB->ODR, LED_CTRL);
+}
+
+void TIM7_IRQHandler(void)
+{
+  TIM7->SR = 0;
+  
+  Pyro.Read();
+  /* average temperature value */
+  if (counter < 6)
   {
     switch (counter)
     {
-      case 0  : __NOP();
-            break;
-      case 6  : Pyro.TEMP /= 5;
-                UART.Transmit(0, Pyro.TEMP);
-            break;
+      case 5  : Pyro.TEMP /= counter;
+                UART.Tx.buffer[3] = (uint8_t)(Pyro.TEMP >> 8);
+                UART.Tx.buffer[4] = (uint8_t)(Pyro.TEMP);
+                Pyro.TEMP = counter = 0;
+            break; 
       default : Pyro.TEMP += Pyro.data.tem;
+                counter++;
             break;
     }
-    counter++;
   }
-  
-  (UART.counter != 66) ? (UART.counter++) : (UART.counter = 0);
-  
-  SETBIT(GPIOB->ODR, LED_CTRL);
 }
 
 void USART1_IRQHandler(void)
@@ -46,7 +53,8 @@ void DMA1_Channel2_3_IRQHandler(void)
     DMA1->IFCR |= (0xFF << 8); 
     if (UART.Rx.CxR() == UART.Rx.buffer[3])
     {
-      UART.Transmit(DEVICE, 0);
+      UART.Transmit(DEVICE);
+      TIM_Enable(TIM7);
       TIM_Enable(TIM6); 
     }
     else
