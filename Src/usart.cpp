@@ -59,8 +59,13 @@ void UartDriver::Transmit(uint16_t data)
 {
   Tx.buffer[0] = HEADER;
   Tx.buffer[1] = (uint8_t)(data >> 8);
-  Tx.buffer[2] = (uint8_t)(data);  
-  Tx.buffer[3] = UartDriver::counter;
+  Tx.buffer[2] = (uint8_t)(data);
+  
+  if (Pyro.SERIN == FORCE_PIR)
+    Tx.buffer[3] = Tx.buffer[4] = 0;
+  
+  Tx.buffer[5] = UartDriver::counter;  
+  Tx.buffer[6] = Tx.CxR();
   
   GPIOA->BSRR |= RE_DE;
   USART1->ICR |= USART_ICR_TCCF;
@@ -93,7 +98,15 @@ void UartDriver::Delay(void)
 uint8_t UartDriver::rx_buff::CxR()
 {
   uint8_t CxR = 0;
-  for (uint8_t i = 0; i < (sizeof(rx_buff::buffer) - 1); i++)
+  for (uint8_t i = 0; i < sizeof(rx_buff::buffer) - 1; i++)
     CxR ^= rx_buff::buffer[i];
+  return CxR;
+}
+
+uint8_t UartDriver::tx_buff::CxR()
+{
+  uint8_t CxR = 0;
+  for (uint8_t i = 0; i < sizeof(tx_buff::buffer) - 1; i++)
+    CxR ^= tx_buff::buffer[i];
   return CxR;
 }

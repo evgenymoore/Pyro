@@ -21,7 +21,8 @@ int main(void)
   Axel.Write(INT_ENABLE, 0x10);
   Axel.Write(POWER_CTL, 0x08);
   
-  TIM7_Init((uint16_t)(SystemCoreClock / 8000), 100);
+  TIM7_Init((uint16_t)(SystemCoreClock / 8000), 20);
+  TIM_Enable(TIM7);
 
   TIM6_Init((uint16_t)(SystemCoreClock / 1000), 12);
   UART.Init();  
