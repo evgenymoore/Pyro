@@ -54,7 +54,7 @@ void DMA1_Channel2_3_IRQHandler(void)
     if (UART.Rx.CxR() == UART.Rx.buffer[3])
     {
       UART.Transmit(DEVICE);
-      TIM_Enable(TIM7);
+      TIM_Disable(TIM7);
       TIM_Enable(TIM6); 
     }
     else
