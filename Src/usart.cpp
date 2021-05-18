@@ -56,7 +56,7 @@ void UartDriver::Init()
 }
 
 void UartDriver::Transmit(uint32_t data)
-{
+{ 
   Tx.buffer[0] = HEADER;
   Tx.buffer[1] = (uint8_t)(data >> 8);
   Tx.buffer[2] = (uint8_t)(data);
@@ -78,7 +78,7 @@ void UartDriver::Transmit(uint32_t data)
     }
     USART1->ICR |= USART_ICR_TCCF;
     Tx.index = 0;
-  }  
+  }
 }
 
 void UartDriver::Receive()

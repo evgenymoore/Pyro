@@ -1,9 +1,7 @@
 #ifndef USART_HPP
 #define USART_HPP
 
-#include "gpio.hpp"
-#include "pyro.hpp"
-#include "tim.h"
+#include "main.h"
 
 #define HEADER          0xAA
 
