@@ -23,12 +23,6 @@ int main(void)
   Axel.Write(POWER_CTL, 0x08);
   TIM2_Init((uint16_t)(SystemCoreClock / 1000), 5000); 
   
-<<<<<<< HEAD
-=======
-  TIM7_Init((uint16_t)(SystemCoreClock / 8000), 20);
-  TIM_Enable(TIM7);
-
->>>>>>> 22bb9888f3f0813989209af2a93340ff8dc53a57
   TIM6_Init((uint16_t)(SystemCoreClock / 1000), 12);
   TIM7_Init((uint16_t)(SystemCoreClock / 1000), 16);
   TIM_Enable(TIM7);

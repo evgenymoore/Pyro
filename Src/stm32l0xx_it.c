@@ -13,15 +13,11 @@ void TIM2_IRQHandler(void)
 void TIM6_IRQHandler(void)
 {
   CLEARREG(TIM6->SR);
-  
-<<<<<<< HEAD
+
   (UART.counter != 83) ? (UART.counter++) : (UART.counter = 0);
-=======
+
   /* transmission indication */
   SETBIT(GPIOB->ODR, LED_CTRL);
->>>>>>> 22bb9888f3f0813989209af2a93340ff8dc53a57
-  
-  (UART.counter != 88) ? (UART.counter++) : (UART.counter = 0);
   
   /* reading the data from direct link of PYD1588 */
   if (Pyro.SERIN == FORCE_TEMP) 
@@ -31,12 +27,9 @@ void TIM6_IRQHandler(void)
     Pyro.SERIN = FORCE_PIR;
     Pyro.Write(Pyro.SERIN);
   }
-<<<<<<< HEAD
   Pyro.Read();
   //Alarm.Expectation.Calculation((uint16_t)Pyro.DIR.DR);
-=======
-  Pyro.Read();  
->>>>>>> 22bb9888f3f0813989209af2a93340ff8dc53a57
+
   UART.Transmit((uint16_t)Pyro.DIR.DR);
 }
 
