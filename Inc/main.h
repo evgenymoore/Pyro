@@ -7,6 +7,7 @@
 #include "pyro.hpp"
 #include "axel.hpp"
 #include "gpio.hpp"
+#include "alarm.hpp"
 #include "usart.hpp"
 
 #define PYRO            1588U

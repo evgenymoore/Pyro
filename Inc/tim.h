@@ -2,6 +2,7 @@
 
 #include "stm32l071xx.h"
 
+void TIM2_Init(uint16_t prescaler, uint16_t preload);
 void TIM6_Init(uint16_t prescaler, uint16_t preload);
 void TIM7_Init(uint16_t prescaler, uint16_t preload);
 

@@ -3,14 +3,18 @@
 
 uint8_t counter = 0;
 
+void TIM2_IRQHandler(void)
+{
+  CLEARREG(TIM2->SR);
+  CLEARBIT(GPIOB->ODR, LED_CTRL);
+  Alarm.State = AlarmDriver::PatternState::Ready;
+}
+
 void TIM6_IRQHandler(void)
 {
   CLEARREG(TIM6->SR);
   
-  /* transmission indication */
-  SETBIT(GPIOB->ODR, LED_CTRL);
-  
-  (UART.counter != 88) ? (UART.counter++) : (UART.counter = 0);
+  (UART.counter != 83) ? (UART.counter++) : (UART.counter = 0);
   
   /* reading the data from direct link of PYD1588 */
   if (Pyro.SERIN == FORCE_TEMP) 
@@ -20,7 +24,8 @@ void TIM6_IRQHandler(void)
     Pyro.SERIN = FORCE_PIR;
     Pyro.Write(Pyro.SERIN);
   }
-  Pyro.Read();  
+  Pyro.Read();
+  //Alarm.Expectation.Calculation((uint16_t)Pyro.DIR.DR);
   UART.Transmit((uint16_t)Pyro.DIR.DR);
 }
 
@@ -47,10 +52,17 @@ void TIM7_IRQHandler(void)
 
 void EXTI4_15_IRQHandler(void)
 {
-  EXTI->PR |= EXTI_PR_PR6 | EXTI_PR_PR8;
+  EXTI->PR |= EXTI_PR_PR6;
   
   /* accelerometer alarm */
-  //SWITCHBIT(GPIOB->ODR, LED_DEB);
+  SETBIT(GPIOB->ODR, LED_CTRL);
+  
+  /* alarm state - capture of sensor */  
+  if (Alarm.State == AlarmDriver::PatternState::Ready)
+  {
+    Alarm.State = AlarmDriver::PatternState::Capture;
+    TIM_Enable(TIM2);
+  }
 }
 
 void USART1_IRQHandler(void)

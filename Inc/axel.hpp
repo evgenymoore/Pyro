@@ -37,7 +37,10 @@ class AxelDriver
 public: 
   AxelData data;
   
-  AxelDriver();
+  uint16_t data_x;
+  uint16_t data_y;
+  uint16_t data_z;
+  
   void Write(uint8_t address, uint8_t data);
   void Read(uint8_t address);
   void Delay(uint16_t time);
