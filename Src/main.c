@@ -14,14 +14,14 @@ int main(void)
   Pyro.Reset();
   Pyro.Write(Pyro.SERIN);
   
-//  SETBIT(SPI_PORT, CS);
-//  SETBIT(SPI_PORT, SCLK);
-//  Axel.Write(THRESH_ACT, 0x40);
-//  Axel.Write(ACT_INACT_CTL, 0x70);
-//  Axel.Write(INT_ENABLE, 0x10);
-//  Axel.Write(DATA_FORMAT, 0x02);
-//  Axel.Write(POWER_CTL, 0x08);
-//  TIM2_Init((uint16_t)(SystemCoreClock / 1000), 5000); 
+  SETBIT(SPI_PORT, CS);
+  SETBIT(SPI_PORT, SCLK);
+  Axel.Write(THRESH_ACT, 0x40);
+  Axel.Write(ACT_INACT_CTL, 0x70);
+  Axel.Write(INT_ENABLE, 0x10);
+  Axel.Write(DATA_FORMAT, 0x02);
+  Axel.Write(POWER_CTL, 0x08);
+  TIM2_Init((uint16_t)(SystemCoreClock / 1000), 5000); 
   
   TIM6_Init((uint16_t)(SystemCoreClock / 1000), 12);
   TIM7_Init((uint16_t)(SystemCoreClock / 1000), 16);
@@ -31,7 +31,7 @@ int main(void)
   UART.Receive();
   
   while (1) {
-    //Axel.Read(INT_SOURCE);
+    Axel.Read(INT_SOURCE);
   }
 }
 
