@@ -1,17 +1,6 @@
 #include "pyro.hpp"
 
-PyroDriver Pyro(GPIOB, BK_DL);
-
-PyroDriver::PyroDriver(GPIO_TypeDef* _port, uint16_t _pin)
-{
-  dl_port = _port;
-  dl_pin = _pin;
-}
-
-inline void PyroDriver::Delay(uint32_t usec)
-{
-  //while(usec-- > 0) {}
-}
+PyroDriver Pyro;
 
 void PyroDriver::Read()
 {
@@ -20,7 +9,7 @@ void PyroDriver::Read()
   /* Set DL = High, to force fast uC controlled DL read out */
   SETBIT(GPIOB->MODER, GPIO_MODER_MODE8_0);
   SETBIT(GPIOB->ODR, BK_DL);
-  while (!(dl_port->ODR & dl_pin)) {}
+  while (!(GPIOB->ODR & BK_DL)) {}
   
   /* delay for 150 us */
   for (uint8_t i = 0; i < 150; i++) ;
@@ -41,7 +30,7 @@ void PyroDriver::Read()
     data.input <<= 1;
     
     /* if DL High set masked bit in PIRVal */
-    if (dl_port->IDR & dl_pin) data.input++;
+    if (GPIOB->IDR & BK_DL) data.input++;
   }
   
   SETBIT(GPIOB->MODER, GPIO_MODER_MODE8_0);

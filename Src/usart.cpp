@@ -81,6 +81,33 @@ void UartDriver::Transmit(uint32_t data)
   }
 }
 
+void UartDriver::TransmitAxis(uint8_t* buffer)
+{ 
+  Tx.buffer[0] = HEADER;
+  
+  Tx.buffer[1] = buffer[1];
+  Tx.buffer[2] = buffer[0];
+  
+  Tx.buffer[3] = buffer[3];
+  Tx.buffer[4] = buffer[2];
+  
+  Tx.buffer[5] = buffer[5];
+  Tx.buffer[6] = buffer[4];
+  
+  GPIOA->BSRR |= RE_DE;
+  USART1->ICR |= USART_ICR_TCCF;
+  if (!(USART1->ISR & USART_ISR_TC)) 
+  {
+    while (Tx.index < sizeof(Tx.buffer)) 
+    {
+      USART1->TDR = Tx.buffer[Tx.index++];
+      Delay();
+    }
+    USART1->ICR |= USART_ICR_TCCF;
+    Tx.index = 0;
+  }
+}
+
 void UartDriver::Receive()
 {
   GPIOA->BSRR |= RE_DE << 16;

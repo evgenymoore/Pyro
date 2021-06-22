@@ -1,5 +1,19 @@
 #include "tim.h"
 
+void TIM2_Init(uint16_t prescaler, uint16_t preload)        /*!< TIM2 ACTIVATION */
+{
+  RCC->APB1ENR |= RCC_APB1ENR_TIM2EN;
+  TIM2->CR1 |= TIM_CR1_OPM | TIM_CR1_ARPE;
+  TIM2->PSC |= prescaler - 1; 
+  TIM2->ARR = preload - 1;     
+  TIM2->EGR |= TIM_EGR_UG;
+  __NOP();  
+  TIM2->SR = 0;
+  TIM2->DIER |= TIM_DIER_UIE;
+  NVIC_SetPriority(TIM2_IRQn, 0); 
+  NVIC_EnableIRQ(TIM2_IRQn);
+}
+
 void TIM6_Init(uint16_t prescaler, uint16_t preload)        /*!< TIM ACTIVATION */
 {
   RCC->APB1ENR |= RCC_APB1ENR_TIM6EN;

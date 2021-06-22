@@ -4,9 +4,11 @@
 #include <stdio.h>
 
 #include "tim.h"
+#include "axel.hpp"
 #include "gpio.hpp"
-#include "usart.hpp"
 #include "pyro.hpp"
+#include "usart.hpp"
+#include "alarm.hpp"
 
 #define DEVICE          1798U
 #define PROJECT         0x9

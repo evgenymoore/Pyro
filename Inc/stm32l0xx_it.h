@@ -4,7 +4,8 @@
 #ifdef __cplusplus
  extern "C" {
 #endif  
-   
+
+void TIM2_IRQHandler(void);   
 void TIM6_IRQHandler(void);
 void TIM7_IRQHandler(void);
 void USART1_IRQHandler(void);

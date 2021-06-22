@@ -15,6 +15,7 @@
 #define THRESH_ACT              0x24
 #define ACT_INACT_CTL           0x27
 #define TAP_AXES                0x2A
+#define BW_RATE                 0x2C
 #define POWER_CTL               0x2D
 #define INT_ENABLE              0x2E
 #define INT_MAP                 0x2F
@@ -37,10 +38,17 @@ class AxelDriver
 public: 
   AxelData data;
   
+  uint8_t buffer[6];
+  int16_t x;
+  int16_t y;
+  int16_t z;
+  
   AxelDriver();
   void Write(uint8_t address, uint8_t data);
   void Read(uint8_t address);
   void Delay(uint16_t time);
+  
+  void Axis(uint8_t address);
 };
 
 extern AxelDriver Axel;

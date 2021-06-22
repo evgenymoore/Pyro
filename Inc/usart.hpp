@@ -36,6 +36,7 @@ class UartDriver
     UartDriver();
     void Init();
     void Transmit(uint32_t data);
+    void TransmitAxis(uint8_t* buffer);
     void Receive();
 };
 

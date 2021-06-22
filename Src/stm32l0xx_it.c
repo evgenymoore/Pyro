@@ -3,22 +3,27 @@
 
 uint8_t counter = 0;
 
+void TIM2_IRQHandler(void)
+{
+  TIM2->SR = 0;
+  CLEARBIT(GPIOB->ODR, LED_CTRL);
+  Alarm.State = AlarmDriver::PatternState::Ready;
+}
+
 void TIM6_IRQHandler(void)
 {
-  TIM6->SR = 0;
+  CLEARREG(TIM6->SR);
   
   (UART.counter != 66) ? (UART.counter++) : (UART.counter = 0);
   
   Pyro.Read();
-
-  UART.Transmit(Pyro.data.adc);
   
-  SWITCHBIT(GPIOB->ODR, LED_CTRL);
+  UART.Transmit(Pyro.data.adc);
 }
 
 void TIM7_IRQHandler(void)
 {
-  TIM7->SR = 0;
+  CLEARREG(TIM7->SR);
   
   Pyro.Read();
   /* average temperature value */
@@ -35,6 +40,20 @@ void TIM7_IRQHandler(void)
                 counter++;
             break;
     }
+  }
+}
+
+void EXTI4_15_IRQHandler(void) 
+{
+  EXTI->PR |= EXTI_PR_PR6;
+  
+  Axel.Axis(0x32);
+  
+  /* alarm state - capture of sensor */  
+  if (Alarm.State == AlarmDriver::PatternState::Ready)
+  {
+    Alarm.State = AlarmDriver::PatternState::Capture;
+    TIM_Enable(TIM2);
   }
 }
 
@@ -61,5 +80,3 @@ void DMA1_Channel2_3_IRQHandler(void)
       UART.Receive();
   }
 }
-
-void EXTI4_15_IRQHandler(void) {}

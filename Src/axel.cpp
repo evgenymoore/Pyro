@@ -94,4 +94,16 @@ void AxelDriver::Read(uint8_t address)
   SETBIT(SPI_PORT, CS);
 }
 
+void AxelDriver::Axis(uint8_t address)
+{
+  for (uint8_t idx = 0; address < 0x38; address++, idx++)
+  {
+    Read(address);
+    buffer[idx] = data.input;
+  }
+  x = (int16_t)((buffer[1] << 8) | buffer[0]);
+  y = (int16_t)((buffer[3] << 8) | buffer[2]);
+  z = (int16_t)((buffer[5] << 8) | buffer[4]);
+}
+
 inline void AxelDriver::Delay(uint16_t time) { for (time; time > 0; time--) ; }
